@@ -1,0 +1,39 @@
+{
+  "app_context": "User provided HTML/CSS design",
+  "theme": "LIGHT",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "instructions_to_main_agent": [
+    "CRITICAL: The user has provided their own HTML/CSS design. Your primary objective is to implement and integrate their exact HTML/CSS structure and styling into the React frontend.",
+    "Ensure all interactive and key informational elements MUST include a 'data-testid' attribute (e.g., data-testid='submit-button').",
+    "Only apply E1 design system rules where the user's provided design is incomplete or missing elements.",
+    "Use React (.js) and standard Tailwind CSS as the baseline. Do not use .tsx files.",
+    "If using Shadcn for missing interactive components (like Dialogs or Selects), heavily customize them to seamlessly match the user's provided CSS."
+  ],
+  "typography": {
+    "strategy": "Match user provided design",
+    "heading_font": "Inherit from provided CSS",
+    "body_font": "Inherit from provided CSS"
+  },
+  "colors": {
+    "strategy": "Match user provided design",
+    "palette": {
+      "primary": "Inherit from provided CSS",
+      "background": "Inherit from provided CSS"
+    }
+  },
+  "layout_and_spacing": {
+    "strategy": "Match user provided design",
+    "general": "Utilize provided HTML structure. Supplement with Tailwind generously if gaps exist."
+  },
+  "motion_and_interaction": {
+    "strategy": "Preserve any CSS animations from the user's code. Add subtle hover states (e.g., opacity changes or slight transforms) only if missing."
+  },
+  "media": {
+    "image_urls": []
+  },
+  "testing": {
+    "required_attributes": [
+      "data-testid"
+    ]
+  }
+}

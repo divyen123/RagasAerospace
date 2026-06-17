@@ -1,0 +1,5 @@
+INFO:     Started server process [20716]
+INFO:     Waiting for application startup.
+2026-06-17 18:13:58,732 - ragas - INFO - Postgres ready — tables ensured.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
