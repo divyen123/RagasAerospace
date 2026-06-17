@@ -785,6 +785,32 @@ function ProductModal({ product, onClose }) {
   );
 }
 
+function AchievementModal({ achievement, onClose }) {
+  if (!achievement) return null;
+  return (
+    <div className="roles-overlay" data-testid="achievement-modal" onClick={(e) => e.target.classList.contains("roles-overlay") && onClose()}>
+      <div className="product-modal">
+        <button className="modal-close" onClick={onClose} data-testid="achievement-close">✕</button>
+        <div className="product-modal-img">
+          {achievement.img ? (
+            <img src={achievement.img} alt={achievement.title} data-testid={`am-img-${achievement.id}`} />
+          ) : (
+            <div style={{ color: "var(--dim)", padding: 40, textAlign: "center" }}>
+              <DroneSVG />
+              <div style={{ marginTop: 12, fontSize: 13, letterSpacing: "0.2em" }}>PHOTO COMING SOON</div>
+            </div>
+          )}
+        </div>
+        <div className="product-modal-body">
+          <div className="section-label">{achievement.location} • {achievement.year}</div>
+          <h2>{achievement.title}</h2>
+          <p style={{ marginTop: 16, lineHeight: 1.7, fontSize: 14, color: "var(--text)" }}>{achievement.body}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ---------- Application Form ----------
 const SKILL_OPTIONS = ["CAD / 3D Modeling", "Python / ML", "Embedded C/C++", "Drone Piloting", "Circuit Design", "Computer Vision", "Flight Control", "Data Analysis"];
 
@@ -911,7 +937,7 @@ function useReveal() {
 }
 
 // ---------- Achievements section (3-col grid, hover reveals description) ----------
-function Achievements() {
+function Achievements({ onOpen }) {
   return (
     <section className="section" id="achievements" data-testid="achievements-section">
       <div className="section-header reveal">
@@ -920,13 +946,20 @@ function Achievements() {
           <h2 className="section-title">Our<br />Achievements</h2>
         </div>
         <p style={{ color: "var(--dim)", maxWidth: 320, fontSize: 13 }}>
-          Hover over any milestone to read the full story.
+          Click any milestone to read the full story.
         </p>
       </div>
 
       <div className="ach-cards reveal" data-testid="ach-cards">
         {ACHIEVEMENTS.map((a, i) => (
-          <article key={a.id} className="ach-card" data-testid={`ach-card-${a.id}`} tabIndex={0}>
+          <article 
+            key={a.id} 
+            className="ach-card" 
+            data-testid={`ach-card-${a.id}`} 
+            tabIndex={0}
+            onClick={() => onOpen(a)}
+            role="button"
+          >
             <div className="ach-card-body">
               <div className="ach-num">{String(i + 1).padStart(2, "0")}</div>
               <h3 className="ach-card-title">{a.title}</h3>
@@ -935,7 +968,7 @@ function Achievements() {
                 <span className="ach-dot">•</span>
                 <span className="ach-year">{a.year}</span>
               </div>
-              <div className="ach-hint">Hover for details →</div>
+              <div className="ach-hint">Click for details →</div>
             </div>
             <div className="ach-desc" aria-hidden>
               <div className="ach-desc-photo">
@@ -963,6 +996,7 @@ function Achievements() {
 // ---------- Main Page ----------
 function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduct, setActiveProduct }) {
   useReveal();
+  const [activeAchievement, setActiveAchievement] = useState(null);
 
   useEffect(() => {
     // Lock scroll during intro animation to prevent scrolling away from top
@@ -1042,7 +1076,7 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
       </div>
 
       {/* ACHIEVEMENTS */}
-      <Achievements />
+      <Achievements onOpen={setActiveAchievement} />
 
       {/* PRODUCTS */}
       <section className="section" id="products">
@@ -1349,6 +1383,7 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
       <AuthModal open={openAuth} onClose={() => setOpenAuth(false)} />
       <RolesModal open={openRoles} onClose={() => setOpenRoles(false)} />
       <ProductModal product={activeProduct} onClose={() => setActiveProduct(null)} />
+      <AchievementModal achievement={activeAchievement} onClose={() => setActiveAchievement(null)} />
     </div>
   );
 }
