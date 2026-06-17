@@ -1036,9 +1036,9 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
 
       {/* STATS */}
       <div className="stats reveal">
-        <div className="stat-item"><div className="stat-num">2<sup>+</sup></div><div className="stat-label">Countries Delivered</div></div>
-        <div className="stat-item"><div className="stat-num">35<sup>+</sup></div><div className="stat-label">Engineers & Operators</div></div>
-        <div className="stat-item"><div className="stat-num">12<sup>+</sup></div><div className="stat-label">Autonomous Drone Fleet</div></div>
+        <div className="stat-item"><div className="stat-num">3<sup>+</sup></div><div className="stat-label">Countries Delivered</div></div>
+        <div className="stat-item"><div className="stat-num">55<sup>+</sup></div><div className="stat-label">Engineers & Operators</div></div>
+        <div className="stat-item"><div className="stat-num">14<sup>+</sup></div><div className="stat-label">Autonomous Drone Fleet</div></div>
       </div>
 
       {/* ACHIEVEMENTS */}
