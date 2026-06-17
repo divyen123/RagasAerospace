@@ -101,6 +101,42 @@ async def send_login_notification(user_email: str, user_name: str, request: Requ
         logger.warning("login notify DB log failed: %s", exc)
 
 
+async def send_register_notification(user_email: str, user_name: str, request: Request) -> None:
+    ip = request.client.host if request.client else "?"
+    ua = request.headers.get("user-agent", "?")
+    ts = datetime.now(timezone.utc).isoformat()
+    subject = f"[Ragas Aerospace] Registration: {user_email}"
+    body = (
+        f"A new user has registered on Ragas Aerospace.\n\n"
+        f"Name : {user_name}\n"
+        f"Email: {user_email}\n"
+        f"Time : {ts}\n"
+        f"IP   : {ip}\n"
+        f"Agent: {ua}\n"
+    )
+    status = "skipped"
+    err = None
+    try:
+        if ADMIN_NOTIFY_EMAIL and SMTP_HOST:
+            status = await asyncio.to_thread(
+                _send_email_blocking, ADMIN_NOTIFY_EMAIL, subject, body
+            )
+    except Exception as exc:
+        status = "error"
+        err = str(exc)
+        logger.warning("register notify email failed: %s", exc)
+    try:
+        pool = await get_pool()
+        async with pool.acquire() as conn:
+            await conn.execute(
+                """INSERT INTO login_notifications (id, user_email, user_name, ip, user_agent, status, error)
+                   VALUES ($1,$2,$3,$4,$5,$6,$7)""",
+                str(uuid.uuid4()), user_email, user_name, ip, ua, f"register_{status}", err,
+            )
+    except Exception as exc:
+        logger.warning("register notify DB log failed: %s", exc)
+
+
 async def send_candidate_autoreply(candidate_email: str, candidate_name: str, role_title: str) -> str:
     """Send the candidate a friendly auto-acknowledgement. Returns status string."""
     if not (candidate_email and SMTP_HOST):
@@ -358,7 +394,7 @@ async def health():
 
 
 @api_router.post("/auth/register", response_model=UserOut)
-async def register(body: RegisterIn, response: Response):
+async def register(body: RegisterIn, request: Request, response: Response):
     email = body.email.lower().strip()
     pool = await get_pool()
     async with pool.acquire() as conn:
@@ -376,6 +412,10 @@ async def register(body: RegisterIn, response: Response):
     token = create_access_token(user_id, email)
     set_auth_cookie(response, token)
     response.headers["X-Auth-Token"] = token
+    try:
+        await send_register_notification(email, body.name.strip(), request)
+    except Exception as exc:
+        logger.warning("register notification failed: %s", exc)
     return UserOut(id=user_id, email=email, name=body.name.strip())
 
 
