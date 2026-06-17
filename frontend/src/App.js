@@ -599,6 +599,7 @@ const NAV_ITEMS = [
 function Nav({ onOpenAuth }) {
   const { user, logout } = useAuth();
   const [activeSection, setActiveSection] = useState("");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const normalizeSection = (id) => (id === "mission" ? "company" : id);
@@ -637,13 +638,28 @@ function Nav({ onOpenAuth }) {
       <a href="#top" className="nav-logo" data-testid="nav-logo">
         <Logo size={56} />
       </a>
-      <div className="nav-links">
+
+      <button 
+        className="mobile-menu-toggle" 
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        aria-label="Toggle menu"
+        aria-expanded={mobileMenuOpen}
+      >
+        <span className={`hamburger-bar ${mobileMenuOpen ? 'open' : ''}`} />
+        <span className={`hamburger-bar ${mobileMenuOpen ? 'open' : ''}`} />
+        <span className={`hamburger-bar ${mobileMenuOpen ? 'open' : ''}`} />
+      </button>
+
+      <div className={`nav-links ${mobileMenuOpen ? "mobile-open" : ""}`}>
         {NAV_ITEMS.map((item) => (
           <a
             key={item.id}
             href={`#${item.id}`}
             className={activeSection === item.id ? "active" : ""}
-            onClick={() => setActiveSection(item.id)}
+            onClick={() => {
+              setActiveSection(item.id);
+              setMobileMenuOpen(false);
+            }}
             data-testid={item.testId}
           >
             {item.label}
@@ -652,10 +668,27 @@ function Nav({ onOpenAuth }) {
         {user ? (
           <div className="nav-user">
             <span data-testid="nav-user-name">{user.name?.split(" ")[0]}</span>
-            <button onClick={logout} data-testid="logout-btn">Sign out</button>
+            <button 
+              onClick={() => {
+                logout();
+                setMobileMenuOpen(false);
+              }} 
+              data-testid="logout-btn"
+            >
+              Sign out
+            </button>
           </div>
         ) : (
-          <button className="nav-cta" onClick={onOpenAuth} data-testid="signin-cta">Sign In</button>
+          <button 
+            className="nav-cta" 
+            onClick={() => {
+              onOpenAuth();
+              setMobileMenuOpen(false);
+            }} 
+            data-testid="signin-cta"
+          >
+            Sign In
+          </button>
         )}
       </div>
     </nav>
