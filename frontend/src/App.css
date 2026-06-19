@@ -4153,17 +4153,18 @@ body::before {
 }
 
 /* --- DRONE SCANNER OVERLAY SYSTEM --- */
-.scanner-overlay {
+.section > .scanner-overlay {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 1;
+  z-index: 1 !important;
   overflow: hidden;
   user-select: none;
+  display: block !important;
 }
 
 /* Ensure section content sits on top of overlay */
-.section > * {
+.section > *:not(.scanner-overlay) {
   position: relative;
   z-index: 2;
 }
@@ -4173,8 +4174,8 @@ body::before {
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(rgba(56, 163, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 163, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(56, 163, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 163, 255, 0.08) 1px, transparent 1px);
   background-size: 40px 40px;
   background-position: center center;
   opacity: 0.85;
@@ -4188,14 +4189,14 @@ body::before {
   height: 2px;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(56, 163, 255, 0.02) 10%, 
-    rgba(56, 163, 255, 0.45) 50%, 
-    rgba(56, 163, 255, 0.02) 90%, 
+    rgba(56, 163, 255, 0.05) 10%, 
+    rgba(56, 163, 255, 0.75) 50%, 
+    rgba(56, 163, 255, 0.05) 90%, 
     transparent 100%
   );
   box-shadow: 
-    0 0 12px rgba(56, 163, 255, 0.4),
-    0 0 4px rgba(56, 163, 255, 0.2);
+    0 0 14px rgba(56, 163, 255, 0.7),
+    0 0 5px rgba(56, 163, 255, 0.4);
   animation: laserScan 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   z-index: 2;
 }
@@ -4213,11 +4214,11 @@ body::before {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  border: 1px dashed rgba(56, 163, 255, 0.04);
-  background: radial-gradient(circle, rgba(56, 163, 255, 0.01) 0%, transparent 70%);
+  border: 1px dashed rgba(56, 163, 255, 0.12);
+  background: radial-gradient(circle, rgba(56, 163, 255, 0.03) 0%, transparent 70%);
   top: 50%;
   animation: radarSpin 24s linear infinite;
-  opacity: 0.7;
+  opacity: 0.75;
   pointer-events: none;
 }
 .scanner-radar.left {
@@ -4234,7 +4235,7 @@ body::before {
   position: absolute;
   inset: 100px;
   border-radius: 50%;
-  border: 1px solid rgba(56, 163, 255, 0.02);
+  border: 1px solid rgba(56, 163, 255, 0.05);
 }
 
 @keyframes radarSpin {
@@ -4255,8 +4256,8 @@ body::before {
   position: absolute;
   width: 16px;
   height: 16px;
-  border: 1px solid rgba(56, 163, 255, 0.25);
-  opacity: 0.8;
+  border: 1px solid rgba(56, 163, 255, 0.50);
+  opacity: 0.85;
   transition: all 0.5s ease;
 }
 .scanner-corner.tl {
@@ -4289,7 +4290,7 @@ body::before {
   position: absolute;
   font-family: 'Barlow Condensed', monospace;
   font-size: 10px;
-  color: rgba(56, 163, 255, 0.35);
+  color: rgba(56, 163, 255, 0.60);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   z-index: 2;
@@ -4310,8 +4311,8 @@ body::before {
 
 /* Hover effects for interactive feedback */
 .section:hover .scanner-corner {
-  border-color: rgba(56, 163, 255, 0.6);
-  box-shadow: 0 0 8px rgba(56, 163, 255, 0.2);
+  border-color: rgba(56, 163, 255, 0.9);
+  box-shadow: 0 0 12px rgba(56, 163, 255, 0.45);
 }
 .section:hover .scanner-laser {
   animation-duration: 4s;
