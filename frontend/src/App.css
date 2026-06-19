@@ -4151,3 +4151,183 @@ body::before {
     transition-duration: 0.001ms !important;
   }
 }
+
+/* --- DRONE SCANNER OVERLAY SYSTEM --- */
+.scanner-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Ensure section content sits on top of overlay */
+.section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Let the overlay container be relative to itself for nested absolute items */
+.scanner-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(56, 163, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 163, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+  opacity: 0.85;
+}
+
+/* Vertical scanning laser line */
+.scanner-laser {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(56, 163, 255, 0.02) 10%, 
+    rgba(56, 163, 255, 0.45) 50%, 
+    rgba(56, 163, 255, 0.02) 90%, 
+    transparent 100%
+  );
+  box-shadow: 
+    0 0 12px rgba(56, 163, 255, 0.4),
+    0 0 4px rgba(56, 163, 255, 0.2);
+  animation: laserScan 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  z-index: 2;
+}
+
+@keyframes laserScan {
+  0% { top: 0%; opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* Rotating Radar sweep in background */
+.scanner-radar {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 1px dashed rgba(56, 163, 255, 0.04);
+  background: radial-gradient(circle, rgba(56, 163, 255, 0.01) 0%, transparent 70%);
+  top: 50%;
+  animation: radarSpin 24s linear infinite;
+  opacity: 0.7;
+  pointer-events: none;
+}
+.scanner-radar.left {
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+.scanner-radar.right {
+  right: 10%;
+  transform: translate(50%, -50%);
+}
+
+.scanner-radar::before {
+  content: '';
+  position: absolute;
+  inset: 100px;
+  border-radius: 50%;
+  border: 1px solid rgba(56, 163, 255, 0.02);
+}
+
+@keyframes radarSpin {
+  from { transform: translate(var(--tx, -50%), -50%) rotate(0deg); }
+  to { transform: translate(var(--tx, -50%), -50%) rotate(360deg); }
+}
+
+/* Specific radar transform overrides to keep centerings correct */
+.scanner-radar.left {
+  --tx: -50%;
+}
+.scanner-radar.right {
+  --tx: 50%;
+}
+
+/* Viewfinder Corner Brackets */
+.scanner-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(56, 163, 255, 0.25);
+  opacity: 0.8;
+  transition: all 0.5s ease;
+}
+.scanner-corner.tl {
+  top: 30px;
+  left: 30px;
+  border-right: none;
+  border-bottom: none;
+}
+.scanner-corner.tr {
+  top: 30px;
+  right: 30px;
+  border-left: none;
+  border-bottom: none;
+}
+.scanner-corner.bl {
+  bottom: 30px;
+  left: 30px;
+  border-right: none;
+  border-top: none;
+}
+.scanner-corner.br {
+  bottom: 30px;
+  right: 30px;
+  border-left: none;
+  border-top: none;
+}
+
+/* HUD telemetry readouts at the sides */
+.scanner-hud-left, .scanner-hud-right {
+  position: absolute;
+  font-family: 'Barlow Condensed', monospace;
+  font-size: 10px;
+  color: rgba(56, 163, 255, 0.35);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  z-index: 2;
+  pointer-events: none;
+}
+.scanner-hud-left {
+  bottom: 30px;
+  left: 60px;
+}
+.scanner-hud-right {
+  bottom: 30px;
+  right: 60px;
+}
+
+.section {
+  overflow: hidden;
+}
+
+/* Hover effects for interactive feedback */
+.section:hover .scanner-corner {
+  border-color: rgba(56, 163, 255, 0.6);
+  box-shadow: 0 0 8px rgba(56, 163, 255, 0.2);
+}
+.section:hover .scanner-laser {
+  animation-duration: 4s;
+}
+
+/* Hide scanner HUD text elements on mobile to prevent overlapping visual clutter */
+@media (max-width: 900px) {
+  .scanner-hud-left, .scanner-hud-right {
+    display: none;
+  }
+  .scanner-corner {
+    width: 10px;
+    height: 10px;
+  }
+  .scanner-corner.tl { top: 15px; left: 15px; }
+  .scanner-corner.tr { top: 15px; right: 15px; }
+  .scanner-corner.bl { bottom: 15px; left: 15px; }
+  .scanner-corner.br { bottom: 15px; right: 15px; }
+}

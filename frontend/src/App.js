@@ -940,6 +940,17 @@ function useReveal() {
 function Achievements({ onOpen }) {
   return (
     <section className="section" id="achievements" data-testid="achievements-section">
+      <div className="scanner-overlay">
+        <div className="scanner-grid" />
+        <div className="scanner-laser" />
+        <div className="scanner-radar left" />
+        <div className="scanner-corner tl" />
+        <div className="scanner-corner tr" />
+        <div className="scanner-corner bl" />
+        <div className="scanner-corner br" />
+        <div className="scanner-hud-left">SYS_ACTIVE // SCAN_ACH</div>
+        <div className="scanner-hud-right">MILESTONE_C2</div>
+      </div>
       <div className="section-header reveal">
         <div>
           <div className="section-label">Recognition · Milestones</div>
@@ -1080,6 +1091,17 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
 
       {/* PRODUCTS */}
       <section className="section" id="products">
+        <div className="scanner-overlay">
+          <div className="scanner-grid" />
+          <div className="scanner-laser" />
+          <div className="scanner-radar right" />
+          <div className="scanner-corner tl" />
+          <div className="scanner-corner tr" />
+          <div className="scanner-corner bl" />
+          <div className="scanner-corner br" />
+          <div className="scanner-hud-left">SYS_ACTIVE // SCAN_PROD</div>
+          <div className="scanner-hud-right">SYSTEMS_C2</div>
+        </div>
         <div className="section-header reveal">
           <div>
             <div className="section-label">Platform</div>
@@ -1139,6 +1161,17 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
 
       {/* TECHNOLOGY */}
       <section className="section" id="technology">
+        <div className="scanner-overlay">
+          <div className="scanner-grid" />
+          <div className="scanner-laser" />
+          <div className="scanner-radar left" />
+          <div className="scanner-corner tl" />
+          <div className="scanner-corner tr" />
+          <div className="scanner-corner bl" />
+          <div className="scanner-corner br" />
+          <div className="scanner-hud-left">SYS_ACTIVE // SCAN_TECH</div>
+          <div className="scanner-hud-right">CORE_TECH_C2</div>
+        </div>
         <div className="section-header reveal">
           <div>
             <div className="section-label">How We Build</div>
@@ -1164,6 +1197,17 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
 
       {/* INDUSTRIES */}
       <section className="section" id="industries" style={{ background: "var(--off-black)" }}>
+        <div className="scanner-overlay">
+          <div className="scanner-grid" />
+          <div className="scanner-laser" />
+          <div className="scanner-radar right" />
+          <div className="scanner-corner tl" />
+          <div className="scanner-corner tr" />
+          <div className="scanner-corner bl" />
+          <div className="scanner-corner br" />
+          <div className="scanner-hud-left">SYS_ACTIVE // SCAN_IND</div>
+          <div className="scanner-hud-right">OPERATE_C2</div>
+        </div>
         <div className="section-header reveal">
           <div>
             <div className="section-label">Where We Operate</div>
@@ -1189,6 +1233,16 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
 
       {/* COMPANY */}
       <section className="section" id="company">
+        <div className="scanner-overlay">
+          <div className="scanner-grid" />
+          <div className="scanner-laser" />
+          <div className="scanner-corner tl" />
+          <div className="scanner-corner tr" />
+          <div className="scanner-corner bl" />
+          <div className="scanner-corner br" />
+          <div className="scanner-hud-left">SYS_ACTIVE // SCAN_COMP</div>
+          <div className="scanner-hud-right">COMPANY_C2</div>
+        </div>
         <div className="section-header reveal">
           <div>
             <div className="section-label">Who We Are</div>
@@ -1204,6 +1258,17 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
 
       {/* CAREERS */}
       <section className="section" id="careers" style={{ background: "var(--off-black)" }}>
+        <div className="scanner-overlay">
+          <div className="scanner-grid" />
+          <div className="scanner-laser" />
+          <div className="scanner-radar left" />
+          <div className="scanner-corner tl" />
+          <div className="scanner-corner tr" />
+          <div className="scanner-corner bl" />
+          <div className="scanner-corner br" />
+          <div className="scanner-hud-left">SYS_ACTIVE // SCAN_CAREER</div>
+          <div className="scanner-hud-right">RECRUIT_C2</div>
+        </div>
         <div className="section-header reveal">
           <div>
             <div className="section-label">Join The Team</div>
@@ -1220,6 +1285,17 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
 
       {/* SUPPORT / FOUNDERS */}
       <section className="section" id="support">
+        <div className="scanner-overlay">
+          <div className="scanner-grid" />
+          <div className="scanner-laser" />
+          <div className="scanner-radar right" />
+          <div className="scanner-corner tl" />
+          <div className="scanner-corner tr" />
+          <div className="scanner-corner bl" />
+          <div className="scanner-corner br" />
+          <div className="scanner-hud-left">SYS_ACTIVE // SCAN_SUP</div>
+          <div className="scanner-hud-right">SUPPORT_C2</div>
+        </div>
         <div className="section-header reveal">
           <div>
             <div className="section-label">Support · Get In Touch</div>
