@@ -1115,17 +1115,17 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
 
       {/* MISSION */}
       <div className="mission reveal" id="mission">
-        <div className="mission-visual">
-          <video
-            src="/mission-drone.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-          />
-        </div>
-        <div>
+        <video
+          className="mission-video-bg"
+          src="/mission-drone.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+        <div className="mission-video-overlay" />
+
+        <div className="mission-content">
           <div className="section-label">Our Mission</div>
           <h2 className="mission-title">Building the<br />Future of<br />Drones</h2>
           <p className="mission-body">At Ragas Aerospace, we are committed to developing cutting-edge unmanned aerial systems that enhance defense capabilities and support our nation's security objectives.</p>

@@ -383,37 +383,91 @@ button { font-family: inherit; cursor: pointer; }
 
 /* --- MISSION --- */
 .mission {
-  display: grid;
-  grid-template-columns: 480px 1fr;
-  gap: 80px;
-  padding: 120px 60px;
-  border-top: 1px solid var(--line);
-  align-items: center;
-}
-.mission-visual {
   position: relative;
-  height: 480px;
-  background: rgba(16, 10, 28, 0.55);
-  border: 1px solid var(--line);
+  overflow: hidden;
+  padding: 160px 40px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+.mission-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.mission-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(180deg, var(--bg) 0%, rgba(4, 11, 30, 0.75) 50%, var(--bg) 100%),
+    radial-gradient(circle at center, rgba(4, 11, 30, 0.4) 0%, var(--bg) 95%);
+  z-index: 2;
+}
+.mission-content {
+  position: relative;
+  z-index: 3;
+  max-width: 860px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .mission-title {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 600;
   font-size: 64px;
-  line-height: 0.95;
+  line-height: 1.1;
   text-transform: uppercase;
   margin: 14px 0 24px;
+  text-align: center;
 }
-.mission-body { color: var(--dim); font-size: 16px; line-height: 1.7; max-width: 540px; }
-.pillars { margin-top: 40px; display: flex; flex-direction: column; gap: 26px; }
-.pillar { display: flex; gap: 24px; align-items: flex-start; }
+.mission-title br {
+  display: none;
+}
+.mission-body { color: var(--dim); font-size: 16px; line-height: 1.7; max-width: 640px; margin: 0 auto 40px; text-align: center; }
+.pillars {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  width: 100%;
+}
+.pillar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  background: rgba(8, 15, 36, 0.45);
+  border: 1px solid rgba(56, 163, 255, 0.1);
+  padding: 32px 24px;
+  border-radius: 8px;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pillar:hover {
+  background: rgba(8, 15, 36, 0.7);
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(56, 163, 255, 0.15);
+}
 .pillar-num {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.3em;
   color: var(--accent);
-  padding-top: 6px;
-  min-width: 30px;
+  padding-top: 0;
+  min-width: unset;
 }
 .pillar h4 {
   font-family: 'Barlow Condensed', sans-serif;
@@ -967,8 +1021,8 @@ button { font-family: inherit; cursor: pointer; }
 
   .hero { padding: 150px 22px 80px; }
   .section { padding: 80px 22px; }
-  .mission { grid-template-columns: 1fr; padding: 80px 22px; gap: 40px; }
-  .mission-visual { height: 320px; }
+  .mission { padding: 100px 22px; }
+  .pillars { grid-template-columns: 1fr; gap: 24px; margin-top: 40px; }
   .product-grid, .tech-grid, .industries-grid { grid-template-columns: 1fr; }
   .span-2 { grid-column: span 1; }
   .stats { grid-template-columns: 1fr; padding: 30px; }
