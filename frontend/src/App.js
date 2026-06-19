@@ -1127,7 +1127,7 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
 
         <div className="mission-content">
           <div className="section-label">Our Mission</div>
-          <h2 className="mission-title">Building the <br />Future of <br />Drones</h2>
+          <h2 className="mission-title">Building the Future of Drones</h2>
           <p className="mission-body">At Ragas Aerospace, we are committed to developing cutting-edge unmanned aerial systems that enhance defense capabilities and support our nation's security objectives.</p>
           <div className="pillars">
             <div className="pillar"><div className="pillar-num">01</div><div><h4>Autonomous Systems</h4><p>Removing the human from harm's way with AI-first design philosophy.</p></div></div>
