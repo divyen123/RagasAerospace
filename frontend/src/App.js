@@ -872,12 +872,17 @@ const ROLES = [
   { id: 5, type: "workshop", title: "Drone Building Workshop", dept: "Training — Hands-On Program", tags: ["Beginner", "Assembly", "Flight Training"] },
 ];
 
-function RolesModal({ open, onClose }) {
+function RolesModal({ open, onClose, onOpenAuth }) {
+  const { user } = useAuth();
   const [filter, setFilter] = useState("all");
   useEffect(() => { if (open) setFilter("all"); }, [open]);
   if (!open) return null;
   const filtered = ROLES.filter((r) => filter === "all" || r.type === filter);
   const apply = () => {
+    if (!user) {
+      if (onOpenAuth) onOpenAuth();
+      return;
+    }
     window.open(GOOGLE_FORM_URL, "_blank", "noopener,noreferrer");
   };
   return (
@@ -1425,7 +1430,14 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
       </footer>
 
       <AuthModal open={openAuth} onClose={() => setOpenAuth(false)} />
-      <RolesModal open={openRoles} onClose={() => setOpenRoles(false)} />
+      <RolesModal
+        open={openRoles}
+        onClose={() => setOpenRoles(false)}
+        onOpenAuth={() => {
+          setOpenRoles(false);
+          setOpenAuth(true);
+        }}
+      />
       <ProductModal product={activeProduct} onClose={() => setActiveProduct(null)} />
       <AchievementModal achievement={activeAchievement} onClose={() => setActiveAchievement(null)} />
     </div>
