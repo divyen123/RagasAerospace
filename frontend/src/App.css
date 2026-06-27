@@ -3800,10 +3800,9 @@ body::before {
 
 .founder-card[data-testid="founder-card"] { order: 1; }
 .founder-card[data-testid="sujitha-card"] { order: 2; }
-.founder-card[data-testid="cofounder-card"] { order: 3; }
-.founder-card[data-testid="varsha-card"] { order: 4; }
-.founder-card[data-testid="kishore-card"] { order: 5; }
-.founder-card[data-testid="archana-card"] { order: 6; }
+.founder-card[data-testid="varsha-card"] { order: 3; }
+.founder-card[data-testid="kishore-card"] { order: 4; }
+.founder-card[data-testid="archana-card"] { order: 5; }
 
 .founder-card {
   position: relative;
@@ -4077,10 +4076,9 @@ body::before {
 
 .founder-card[data-testid="founder-card"] { --member-delay: 0; }
 .founder-card[data-testid="sujitha-card"] { --member-delay: 1; }
-.founder-card[data-testid="cofounder-card"] { --member-delay: 2; }
-.founder-card[data-testid="varsha-card"] { --member-delay: 3; }
-.founder-card[data-testid="kishore-card"] { --member-delay: 4; }
-.founder-card[data-testid="archana-card"] { --member-delay: 5; }
+.founder-card[data-testid="varsha-card"] { --member-delay: 2; }
+.founder-card[data-testid="kishore-card"] { --member-delay: 3; }
+.founder-card[data-testid="archana-card"] { --member-delay: 4; }
 
 @keyframes founder-card-rise {
   from { opacity: 0; translate: 0 24px; scale: 0.985; }

@@ -468,19 +468,6 @@ const TEAM_MEMBERS = [
     phoneTestId: "sujitha-phone",
   },
   {
-    testId: "cofounder-card",
-    photo: ASSETS.cofounder,
-    alt: "Co-Founder",
-    role: "Co-Founder",
-    name: "Sudhiksha V",
-    bio: "Operations, partnerships and programs lead. Drives field deployments, workshops, and community outreach for Ragas Aerospace.",
-    email: "sudhikshavbr@gmail.com",
-    emailTestId: "cofounder-email",
-    phone: "+91 94448 06265",
-    phoneHref: "+919444806265",
-    phoneTestId: "cofounder-phone",
-  },
-  {
     testId: "varsha-card",
     photo: ASSETS.varsha,
     alt: "K P Varsha",
@@ -1348,25 +1335,6 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
               <div className="founder-links">
                 <a href="mailto:raghavsaravanan22@gmail.com" data-testid="founder-email">raghavsaravanan22@gmail.com</a>
                 <a href="tel:+919884739061" data-testid="founder-phone">+91 98847 39061</a>
-              </div>
-            </div>
-          </div>
-
-          {/* CO-FOUNDER — female */}
-          <div className="founder-card" data-testid="cofounder-card">
-            <div className="founder-avatar">
-              <img src={ASSETS.cofounder} alt="Co-Founder" />
-            </div>
-            <div style={{ flex: 1 }}>
-              <div className="founder-role">Co-Founder</div>
-              <div className="founder-name">Sudhiksha V</div>
-              <p className="founder-bio">
-                Operations, partnerships and programs lead. Drives field deployments,
-                workshops, and community outreach for Ragas Aerospace.
-              </p>
-              <div className="founder-links">
-                <a href="mailto:sudhikshavbr@gmail.com" data-testid="cofounder-email">sudhikshavbr@gmail.com</a>
-                <a href="tel:+919444806265" data-testid="cofounder-phone">+91 94448 06265</a>
               </div>
             </div>
           </div>
