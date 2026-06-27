@@ -76,3 +76,132 @@ webpack compiled [1m[32msuccessfully[39m[22m
 Compiling...
 Compiled successfully!
 webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Failed to compile.
+
+Syntax error: C:\Projects\RagasAerospace-clean\RagasAerospace-main\frontend\src\App.css Unclosed block (4046:1)
+ [90m 4044 | [39m[33m}[39m
+ [90m 4045 | [39m
+[1m[31m>[39m[22m[90m 4046 | [39m[36m@media[39m[36m [39m[36m(max-width: 720px)[39m [33m{[39m
+ [90m      | [39m[1m[31m^[39m[22m
+ [90m 4047 | [39m  [33m.founder-card[39m [33m{[39m
+ [90m 4048 | [39m    padding[33m:[39m 20px[33m;[39m
+[1m[31mERROR[39m[22m in [1m./src/App.css[39m[22m (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/App.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+SyntaxError
+
+(4046:1) C:\Projects\RagasAerospace-clean\RagasAerospace-main\frontend\src\App.css Unclosed block
+
+ [90m 4044 | [39m[33m}[39m
+ [90m 4045 | [39m
+[1m[31m>[39m[22m[90m 4046 | [39m[36m@media[39m[36m [39m[36m(max-width: 720px)[39m [33m{[39m
+ [90m      | [39m[1m[31m^[39m[22m
+ [90m 4047 | [39m  [33m.founder-card[39m [33m{[39m
+ [90m 4048 | [39m    padding[33m:[39m 20px[33m;[39m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Failed to compile.
+
+Syntax error: C:\Projects\RagasAerospace-clean\RagasAerospace-main\frontend\src\App.css Unclosed block (4046:1)
+ [90m 4044 | [39m[33m}[39m
+ [90m 4045 | [39m
+[1m[31m>[39m[22m[90m 4046 | [39m[36m@media[39m[36m [39m[36m(max-width: 720px)[39m [33m{[39m
+ [90m      | [39m[1m[31m^[39m[22m
+ [90m 4047 | [39m  [33m.founder-card[39m [33m{[39m
+ [90m 4048 | [39m    padding[33m:[39m 20px[33m;[39m
+[1m[31mERROR[39m[22m in [1m./src/App.css[39m[22m (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/App.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+SyntaxError
+
+(4046:1) C:\Projects\RagasAerospace-clean\RagasAerospace-main\frontend\src\App.css Unclosed block
+
+ [90m 4044 | [39m[33m}[39m
+ [90m 4045 | [39m
+[1m[31m>[39m[22m[90m 4046 | [39m[36m@media[39m[36m [39m[36m(max-width: 720px)[39m [33m{[39m
+ [90m      | [39m[1m[31m^[39m[22m
+ [90m 4047 | [39m  [33m.founder-card[39m [33m{[39m
+ [90m 4048 | [39m    padding[33m:[39m 20px[33m;[39m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Failed to compile.
+
+Syntax error: C:\Projects\RagasAerospace-clean\RagasAerospace-main\frontend\src\App.css Unexpected } (4052:1)
+ [90m 4050 | [39m
+ [90m 4051 | [39m  [33m}[39m
+[1m[31m>[39m[22m[90m 4052 | [39m[33m}[39m
+ [90m      | [39m[1m[31m^[39m[22m
+ [90m 4053 | [39m
+ [90m 4054 | [39m[36m@media[39m[36m [39m[36m(max-width: 980px)[39m [33m{[39m
+[1m[31mERROR[39m[22m in [1m./src/App.css[39m[22m (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/App.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+SyntaxError
+
+(4052:1) C:\Projects\RagasAerospace-clean\RagasAerospace-main\frontend\src\App.css Unexpected }
+
+ [90m 4050 | [39m
+ [90m 4051 | [39m  [33m}[39m
+[1m[31m>[39m[22m[90m 4052 | [39m[33m}[39m
+ [90m      | [39m[1m[31m^[39m[22m
+ [90m 4053 | [39m
+ [90m 4054 | [39m[36m@media[39m[36m [39m[36m(max-width: 980px)[39m [33m{[39m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Failed to compile.
+
+Syntax error: C:\Projects\RagasAerospace-clean\RagasAerospace-main\frontend\src\App.css Unexpected } (4050:1)
+ [90m 4048 | [39m    height[33m:[39m 240px[33m;[39m
+ [90m 4049 | [39m  [33m}[39m
+[1m[31m>[39m[22m[90m 4050 | [39m[33m}[39m
+ [90m      | [39m[1m[31m^[39m[22m
+ [90m 4051 | [39m
+ [90m 4052 | [39m[36m@media[39m[36m [39m[36m(max-width: 980px)[39m [33m{[39m
+[1m[31mERROR[39m[22m in [1m./src/App.css[39m[22m (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/App.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+SyntaxError
+
+(4050:1) C:\Projects\RagasAerospace-clean\RagasAerospace-main\frontend\src\App.css Unexpected }
+
+ [90m 4048 | [39m    height[33m:[39m 240px[33m;[39m
+ [90m 4049 | [39m  [33m}[39m
+[1m[31m>[39m[22m[90m 4050 | [39m[33m}[39m
+ [90m      | [39m[1m[31m^[39m[22m
+ [90m 4051 | [39m
+ [90m 4052 | [39m[36m@media[39m[36m [39m[36m(max-width: 980px)[39m [33m{[39m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
