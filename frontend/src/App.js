@@ -1324,6 +1324,38 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
           </div>
         </div>
 
+        {/* Portfolios links block */}
+        <div className="reveal portfolios-container" style={{ marginTop: 24 }}>
+          <a
+            href="https://founder-portfolio-steel.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="portfolio-card"
+            data-testid="founder-portfolio-link"
+          >
+            <div className="portfolio-card-icon">👤</div>
+            <div>
+              <h4 className="portfolio-card-title">Founder's Portfolio</h4>
+              <p className="portfolio-card-desc">Explore the founder's research, background, and previous projects.</p>
+            </div>
+            <span className="portfolio-card-arrow">→</span>
+          </a>
+          <a
+            href="https://ragas-aerospace.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="portfolio-card"
+            data-testid="company-portfolio-link"
+          >
+            <div className="portfolio-card-icon">🏢</div>
+            <div>
+              <h4 className="portfolio-card-title">Company's Portfolio</h4>
+              <p className="portfolio-card-desc">View our full corporate portfolio, credentials, and achievements.</p>
+            </div>
+            <span className="portfolio-card-arrow">→</span>
+          </a>
+        </div>
+
         <div className="founders-grid reveal" data-testid="founders-grid" style={{ marginTop: 56 }}>
           {/* FOUNDER — male */}
           <div className="founder-card" data-testid="founder-card">
