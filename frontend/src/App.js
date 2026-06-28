@@ -1333,7 +1333,9 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
             className="portfolio-card"
             data-testid="founder-portfolio-link"
           >
-            <div className="portfolio-card-icon">👤</div>
+            <div className="portfolio-card-icon">
+              <img src="/founder-portfolio-icon.jpg" alt="Founder Portfolio" />
+            </div>
             <div>
               <h4 className="portfolio-card-title">Founder's Portfolio</h4>
               <p className="portfolio-card-desc">Explore the founder's research, background, and previous projects.</p>
@@ -1347,9 +1349,11 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
             className="portfolio-card"
             data-testid="company-portfolio-link"
           >
-            <div className="portfolio-card-icon">🏢</div>
+            <div className="portfolio-card-icon">
+              <img src="/raic-logo-icon.jpg" alt="RAIC Tech Portfolio" />
+            </div>
             <div>
-              <h4 className="portfolio-card-title">Company's Portfolio</h4>
+              <h4 className="portfolio-card-title">RAIC Tech Portfolio</h4>
               <p className="portfolio-card-desc">View our full corporate portfolio, credentials, and achievements.</p>
             </div>
             <span className="portfolio-card-arrow">→</span>
