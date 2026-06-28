@@ -1341,7 +1341,7 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
             <span className="portfolio-card-arrow">→</span>
           </a>
           <a
-            href="https://ragas-aerospace.vercel.app"
+            href="https://ragasaerospace-portfolio.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="portfolio-card"
