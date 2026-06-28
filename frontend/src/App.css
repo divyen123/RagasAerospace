@@ -4442,3 +4442,51 @@ body::before {
     gap: 16px;
   }
 }
+
+/* Terms & Conditions styles */
+.terms-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 8px 0;
+}
+
+.terms-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.terms-checkbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.terms-label {
+  font-size: 13px;
+  color: var(--dim);
+  line-height: 1.5;
+  user-select: none;
+  text-align: left;
+}
+
+.terms-label.disabled {
+  color: rgba(255, 255, 255, 0.25);
+  cursor: not-allowed;
+}
+
+.terms-link {
+  color: var(--accent);
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.terms-link:hover {
+  color: #fff;
+}

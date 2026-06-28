@@ -691,7 +691,16 @@ function AuthModal({ open, onClose, defaultMode = "login" }) {
   const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState(false);
-  useEffect(() => { if (open) { setErr(""); setMode(defaultMode); } }, [open, defaultMode]);
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
+  const [readTerms, setReadTerms] = useState(false);
+  useEffect(() => {
+    if (open) {
+      setErr("");
+      setMode(defaultMode);
+      setAcceptedTerms(false);
+      setReadTerms(false);
+    }
+  }, [open, defaultMode]);
   if (!open) return null;
   const submit = async (e) => {
     e.preventDefault(); setErr(""); setBusy(true);
@@ -725,8 +734,42 @@ function AuthModal({ open, onClose, defaultMode = "login" }) {
             <label>Password</label>
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required minLength={6} data-testid="auth-password" placeholder="At least 6 characters" />
           </div>
+          {mode === "register" && (
+            <div className="terms-container">
+              <input
+                type="checkbox"
+                id="accept-terms"
+                className="terms-checkbox"
+                checked={acceptedTerms}
+                onChange={(e) => setAcceptedTerms(e.target.checked)}
+                disabled={!readTerms}
+                data-testid="auth-terms-checkbox"
+              />
+              <label 
+                htmlFor="accept-terms" 
+                className={`terms-label ${!readTerms ? "disabled" : ""}`}
+              >
+                I accept the{" "}
+                <a
+                  href="/discipline-policy.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setReadTerms(true)}
+                  className="terms-link"
+                  data-testid="auth-terms-link"
+                >
+                  Discipline, Conduct, Confidentiality and Ethics Policy
+                </a>
+              </label>
+            </div>
+          )}
           {err && <div className="form-error" data-testid="auth-error">{err}</div>}
-          <button type="submit" className="submit-btn" disabled={busy} data-testid="auth-submit">
+          <button 
+            type="submit" 
+            className="submit-btn" 
+            disabled={busy || (mode === "register" && !acceptedTerms)} 
+            data-testid="auth-submit"
+          >
             {busy ? "Please wait…" : mode === "login" ? "Sign In →" : "Create Account →"}
           </button>
         </form>
