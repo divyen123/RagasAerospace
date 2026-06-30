@@ -329,7 +329,7 @@ async def on_startup():
         # idempotent column add for existing DBs
         await conn.execute("ALTER TABLE users ADD COLUMN IF NOT EXISTS is_admin BOOLEAN NOT NULL DEFAULT FALSE;")
         # auto-promote known admin emails
-        admin_emails = [e.strip().lower() for e in os.environ.get("ADMIN_EMAILS", "studyhoodie25@gmail.com,raghavsaravanan22@gmail.com,sudhikshavbr@gmail.com,ragasaerospace@gmail.com").split(",") if e.strip()]
+        admin_emails = [e.strip().lower() for e in os.environ.get("ADMIN_EMAILS", "studyhoodie25@gmail.com,raghavsaravanan22@gmail.com,sudhikshavbr@gmail.com,ragasaerospace@gmail.com,raghavmarvellous@gmail.com").split(",") if e.strip()]
         if admin_emails:
             await conn.execute(
                 "UPDATE users SET is_admin = TRUE WHERE LOWER(email) = ANY($1::text[])",
