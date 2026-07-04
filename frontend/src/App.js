@@ -436,7 +436,7 @@ const SOCIALS = [
     path: "M4.98 3.5C4.98 4.881 3.87 6 2.5 6S0 4.881 0 3.5 1.119 1 2.5 1s2.48 1.119 2.48 2.5zM.22 8h4.56v14H.22V8zm7.6 0h4.37v1.93h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 6.99V22h-4.56v-6.3c0-1.5-.03-3.43-2.09-3.43-2.09 0-2.41 1.63-2.41 3.32V22H7.82V8z" },
   { id: "twitter", label: "X / Twitter", url: "https://x.com/RagasAerospace",
     path: "M18.244 2H21.5l-7.5 8.57L22.5 22h-6.84l-5.36-7-6.13 7H.92l8.02-9.16L.5 2h7l4.85 6.43L18.244 2zm-1.2 18h1.9L7.04 4H5.04l12.004 16z" },
-  { id: "email", label: "Email Support", url: "mailto:ragasaerospace@gmail.com",
+  { id: "email", label: "Email Support", url: "mailto:ceo@ragasgroups.com",
     path: "M2 4h20c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2v.3l10 6.2 10-6.2V6H2zm0 2.7V18h20V8.7l-10 6.2L2 8.7z" },
 ];
 
@@ -448,7 +448,7 @@ const TEAM_MEMBERS = [
     role: "Founder & CEO",
     name: "Raghav S",
     bio: "Aerospace engineer and defence technologist building autonomous systems that protect lives. Leads platform engineering and product strategy.",
-    email: "raghavsaravanan22@gmail.com",
+    email: "raghav@ragasgroups.com",
     emailTestId: "founder-email",
     phone: "+91 98847 39061",
     phoneHref: "+919884739061",
@@ -1346,11 +1346,11 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
               <div className="section-label" style={{ marginBottom: 8 }}>— Official Support</div>
               <h3 className="support-mail-title">Email us at</h3>
               <a
-                href="mailto:ragasaerospace@gmail.com"
+                href="mailto:ceo@ragasgroups.com"
                 className="support-mail"
                 data-testid="support-mail"
               >
-                ragasaerospace@gmail.com
+                ceo@ragasgroups.com
               </a>
               <p className="support-mail-sub">
                 For partnerships, general enquiries, press, and product information.
@@ -1358,7 +1358,7 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
               </p>
             </div>
             <a
-              href="mailto:ragasaerospace@gmail.com"
+              href="mailto:ceo@ragasgroups.com"
               className="btn-primary"
               data-testid="support-mail-cta"
             >
@@ -1417,7 +1417,7 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
                 that protect lives. Leads platform engineering and product strategy.
               </p>
               <div className="founder-links">
-                <a href="mailto:raghavsaravanan22@gmail.com" data-testid="founder-email">raghavsaravanan22@gmail.com</a>
+                <a href="mailto:raghav@ragasgroups.com" data-testid="founder-email">raghav@ragasgroups.com</a>
                 <a href="tel:+919884739061" data-testid="founder-phone">+91 98847 39061</a>
               </div>
             </div>
