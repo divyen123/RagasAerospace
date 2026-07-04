@@ -1370,7 +1370,7 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
         {/* Portfolios links block */}
         <div className="reveal portfolios-container" style={{ marginTop: 24 }}>
           <a
-            href="https://founder-portfolio-steel.vercel.app"
+            href="https://founder.ragasgroups.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="portfolio-card"
@@ -1386,7 +1386,7 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
             <span className="portfolio-card-arrow">→</span>
           </a>
           <a
-            href="https://ragasaerospace-portfolio.vercel.app/"
+            href="https://raic.ragasgroups.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="portfolio-card"

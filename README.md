@@ -2,7 +2,7 @@
 
 **Indian defence drone technology company building next-gen autonomous aerial systems for surveillance, security, and mission-critical operations.**
 
-[![Live Site](https://img.shields.io/badge/🌐_Live_Site-ragas--aerospace.vercel.app-0099ff?style=for-the-badge)](https://ragas-aerospace.vercel.app)
+[![Live Site](https://img.shields.io/badge/🌐_Live_Site-aerospace.ragasgroups.com-0099ff?style=for-the-badge)](https://aerospace.ragasgroups.com)
 [![Status](https://img.shields.io/badge/Status-Active-00c853?style=for-the-badge)]()
 
 ---
@@ -80,7 +80,7 @@ uvicorn server:app --reload
 
 ## 🌐 Deployment
 
-- **Frontend** → Deployed on [Vercel](https://ragas-aerospace.vercel.app)
+- **Frontend** → Deployed on [Vercel](https://aerospace.ragasgroups.com)
 - **Backend** → Configured for [Render](https://render.com) via `render.yaml`
 
 ---
