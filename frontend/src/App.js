@@ -7,6 +7,7 @@ import kishorePhoto from "./assets/kishore-karthik-r.png";
 import varshaPhoto from "./assets/kp-varsha.png";
 import archanaPhoto from "./assets/archana-s.png";
 import sujithaPhoto from "./assets/sujitha-m.png";
+import founderPhoto from "./assets/raghav-s.png";
 
 // ---------- API ----------
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -34,7 +35,7 @@ const ASSETS = {
   hexa: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/o6wothx5_WhatsApp%20Image%202026-05-29%20.jpeg",
   octa: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/cyabvnuw_WhatsApp%20Image%20.jpeg",
   vtol: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/a0sxvbgo_WhatsApp%20.jpeg",
-  founder: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/z5fujzg7_Let%20me%20.jpeg",
+  founder: founderPhoto,
   cofounder: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/o9qbfst7_cofoun.jpeg",
   kishore: kishorePhoto,
   varsha: varshaPhoto,
