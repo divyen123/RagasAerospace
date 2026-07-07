@@ -8,6 +8,7 @@ import varshaPhoto from "./assets/kp-varsha.png";
 import archanaPhoto from "./assets/archana-s.png";
 import sujithaPhoto from "./assets/sujitha-m.png";
 import founderPhoto from "./assets/raghav-s.png";
+import companyLogo from "./assets/company-logo.jpeg";
 import productTricopterPhoto from "./assets/product-tricopter.jpeg";
 import productQuadcopterPhoto from "./assets/product-quadcopter.jpeg";
 import productHexacopterPhoto from "./assets/product-hexacopter.jpeg";
@@ -47,7 +48,7 @@ const fmtErr = (d) => {
 
 // ---------- Asset URLs ----------
 const ASSETS = {
-  logo: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/u050m94l_logo.jpeg",
+  logo: companyLogo,
   bg:   "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/wcplbgaq_bg%202.jpeg",
   tri: productTricopterPhoto,
   quad: productQuadcopterPhoto,

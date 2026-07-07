@@ -1283,7 +1283,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .logo-mark {
   display: inline-block;
-  background-image: url("https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/u050m94l_logo.jpeg");
+  background-image: url("./assets/company-logo.jpeg");
   background-repeat: no-repeat;
   /* show the full emblem area (top portion of the JPEG that contains the winged drone star) */
   background-size: 145% auto;
