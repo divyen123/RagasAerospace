@@ -8,6 +8,25 @@ import varshaPhoto from "./assets/kp-varsha.png";
 import archanaPhoto from "./assets/archana-s.png";
 import sujithaPhoto from "./assets/sujitha-m.png";
 import founderPhoto from "./assets/raghav-s.png";
+import productTricopterPhoto from "./assets/product-tricopter.jpeg";
+import productQuadcopterPhoto from "./assets/product-quadcopter.jpeg";
+import productHexacopterPhoto from "./assets/product-hexacopter.jpeg";
+import productOctocopterPhoto from "./assets/product-octocopter.jpeg";
+import productVtolPhoto from "./assets/product-vtol.jpeg";
+import productFpvPhoto from "./assets/product-fpv.jpeg";
+import achievement01Photo from "./assets/achievement-01.jpeg";
+import achievement02Photo from "./assets/achievement-02.jpeg";
+import achievement03Photo from "./assets/achievement-03.jpeg";
+import achievement04Photo from "./assets/achievement-04.jpeg";
+import achievement05Photo from "./assets/achievement-05.jpeg";
+import achievement06Photo from "./assets/achievement-06.jpeg";
+import achievement07Photo from "./assets/achievement-07.jpeg";
+import achievement08Photo from "./assets/achievement-08.jpeg";
+import achievement09Photo from "./assets/achievement-09.jpeg";
+import achievement10Photo from "./assets/achievement-10.jpeg";
+import achievement11Photo from "./assets/achievement-11.jpeg";
+import achievement12Photo from "./assets/achievement-12.jpeg";
+import achievement13Photo from "./assets/achievement-13.jpeg";
 
 // ---------- API ----------
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -30,31 +49,31 @@ const fmtErr = (d) => {
 const ASSETS = {
   logo: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/u050m94l_logo.jpeg",
   bg:   "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/wcplbgaq_bg%202.jpeg",
-  tri:  "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/4ltxlgep_WhatsApp%20Image%202026-05-29%20at%2011.11.57%20PM.jpeg",
-  quad: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/jpq3s3ao_WhatsApp%20Image%202026-05-29.jpeg",
-  hexa: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/o6wothx5_WhatsApp%20Image%202026-05-29%20.jpeg",
-  octa: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/cyabvnuw_WhatsApp%20Image%20.jpeg",
-  vtol: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/a0sxvbgo_WhatsApp%20.jpeg",
+  tri: productTricopterPhoto,
+  quad: productQuadcopterPhoto,
+  hexa: productHexacopterPhoto,
+  octa: productOctocopterPhoto,
+  vtol: productVtolPhoto,
   founder: founderPhoto,
   cofounder: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/o9qbfst7_cofoun.jpeg",
   kishore: kishorePhoto,
   varsha: varshaPhoto,
   archana: archanaPhoto,
   sujitha: sujithaPhoto,
-  fpv: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/81pursfl_WhatsApp%20Image%202026-06-06%20at%207.29.38%20PM.jpeg",
-  ach3: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/xqzumtvz_ac%201.jpeg",
-  ach4: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/14xmwp6a_ac2.jpeg",
-  ach5: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/o6eloplc_ac3.jpeg",
-  ach6: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/7oja2i64_WhatsApp%20Image%202026-06-06%20at%2011.31.01%20PM.jpeg",
-  ach7: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/fn4m9py6_WhatsApp%20Image%202026-06-06%20at%2011.32.32%20PM.jpeg",
-  ach9: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/hpz638q4_WhatsApp%20Image%202026-06-06%20at%2011.36.08%20PM.jpeg",
-  ach10: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/2k4tcjv1_WhatsApp%20Image%202026-06-06%20at%2011.38.27%20PM.jpeg",
-  ach11: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/dwccso93_WhatsApp%20Image%202026-06-06%20at%2011.39.54%20PM.jpeg",
-  ach12: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/1zgcr5tj_WhatsApp%20Image%202026-06-06%20at%2011.41.40%20PM.jpeg",
-  ach13: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/ortfwhf8_WhatsApp%20Image%202026-06-06%20at%2011.46.20%20PM.jpeg",
-  ach1: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/w3dqeuo6_WhatsApp%20Image%202026-06-06%20at%2011.21.22%20PM.jpeg",
-  ach2: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/tvtb9kui_WhatsApp%20Image%202026-06-06%20at%2011.50.41%20PM.jpeg",
-  ach8: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/9tkstenb_WhatsApp%20Image%202026-06-06%20at%2011.33.52%20PM.jpeg",
+  fpv: productFpvPhoto,
+  ach3: achievement03Photo,
+  ach4: achievement04Photo,
+  ach5: achievement05Photo,
+  ach6: achievement06Photo,
+  ach7: achievement07Photo,
+  ach9: achievement09Photo,
+  ach10: achievement10Photo,
+  ach11: achievement11Photo,
+  ach12: achievement12Photo,
+  ach13: achievement13Photo,
+  ach1: achievement01Photo,
+  ach2: achievement02Photo,
+  ach8: achievement08Photo,
 };
 
 // ---------- Achievements ----------
