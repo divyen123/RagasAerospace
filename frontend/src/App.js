@@ -5,6 +5,7 @@ import axios from "axios";
 import "./App.css";
 import kishorePhoto from "./assets/kishore-karthik-r.png";
 import varshaPhoto from "./assets/kp-varsha.png";
+import priyankaPhoto from "./assets/priyanka-a.png";
 import archanaPhoto from "./assets/archana-s.png";
 import sujithaPhoto from "./assets/sujitha-m.png";
 import founderPhoto from "./assets/raghav-s.png";
@@ -59,6 +60,7 @@ const ASSETS = {
   cofounder: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/o9qbfst7_cofoun.jpeg",
   kishore: kishorePhoto,
   varsha: varshaPhoto,
+  priyanka: priyankaPhoto,
   archana: archanaPhoto,
   sujitha: sujithaPhoto,
   fpv: productFpvPhoto,
@@ -500,6 +502,19 @@ const TEAM_MEMBERS = [
     phone: "+91 86106 46791",
     phoneHref: "+918610646791",
     phoneTestId: "varsha-phone",
+  },
+  {
+    testId: "priyanka-card",
+    photo: ASSETS.priyanka,
+    alt: "Priyanka A",
+    role: "HR",
+    name: "Priyanka A",
+    bio: "Human Resources representative supporting recruitment, talent acquisition, and team coordination while helping build a skilled, collaborative, and innovation-driven aerospace workforce.",
+    email: "priyankaanjan23@gmail.com",
+    emailTestId: "priyanka-email",
+    phone: "+91 76038 07557",
+    phoneHref: "+917603807557",
+    phoneTestId: "priyanka-phone",
   },
   {
     testId: "kishore-card",
@@ -1476,6 +1491,25 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
               <div className="founder-links">
                 <a href="mailto:Varshaa.k.pavithran@gmail.com" data-testid="varsha-email">Varshaa.k.pavithran@gmail.com</a>
                 <a href="tel:+918610646791" data-testid="varsha-phone">+91 86106 46791</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="founder-card" data-testid="priyanka-card">
+            <div className="founder-avatar">
+              <img src={ASSETS.priyanka} alt="Priyanka A" />
+            </div>
+            <div style={{ flex: 1 }}>
+              <div className="founder-role">HR</div>
+              <div className="founder-name">Priyanka A</div>
+              <p className="founder-bio">
+                Human Resources representative supporting recruitment, talent acquisition,
+                and team coordination while helping build a skilled, collaborative, and
+                innovation-driven aerospace workforce.
+              </p>
+              <div className="founder-links">
+                <a href="mailto:priyankaanjan23@gmail.com" data-testid="priyanka-email">priyankaanjan23@gmail.com</a>
+                <a href="tel:+917603807557" data-testid="priyanka-phone">+91 76038 07557</a>
               </div>
             </div>
           </div>
