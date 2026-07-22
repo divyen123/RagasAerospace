@@ -501,15 +501,6 @@ const Socials = () => (
   </div>
 );
 
-const ContactIcon = ({ type }) => (
-  <svg className="founder-contact-icon" viewBox="0 0 24 24" aria-hidden>
-    {type === "phone" ? (
-      <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1 .3 2 .5 3.1.5.7 0 1.3.6 1.3 1.3v3.5c0 .7-.6 1.3-1.3 1.3C10.2 21.5 2.5 13.8 2.5 4.3 2.5 3.6 3.1 3 3.8 3h3.5c.7 0 1.3.6 1.3 1.3 0 1.1.2 2.1.5 3.1.1.4 0 .8-.3 1.2l-2.2 2.2z" />
-    ) : (
-      <path d="M3.5 5h17c.8 0 1.5.7 1.5 1.5v11c0 .8-.7 1.5-1.5 1.5h-17c-.8 0-1.5-.7-1.5-1.5v-11C2 5.7 2.7 5 3.5 5zm.8 2 7.7 5 7.7-5H4.3zm15.7 9.8V8.9l-8 5.2-8-5.2v7.9h16z" />
-    )}
-  </svg>
-);
 
 const TeamCard = ({ member, index }) => (
   <div className="founder-card" data-testid={member.testId} style={{ "--member-index": index }}>
@@ -523,11 +514,9 @@ const TeamCard = ({ member, index }) => (
       <p className="founder-bio">{member.bio}</p>
       <div className="founder-links">
         <a href={`mailto:${member.email}`} data-testid={member.emailTestId}>
-          <ContactIcon type="mail" />
           <span>{member.email}</span>
         </a>
         <a href={`tel:${member.phoneHref}`} data-testid={member.phoneTestId}>
-          <ContactIcon type="phone" />
           <span>{member.phone}</span>
         </a>
       </div>
