@@ -3,11 +3,6 @@ import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-do
 import { motion } from "framer-motion";
 import axios from "axios";
 import "./App.css";
-import kishorePhoto from "./assets/kishore-karthik-r.png";
-import varshaPhoto from "./assets/kp-varsha.png";
-import priyankaPhoto from "./assets/priyanka-a.png";
-import archanaPhoto from "./assets/archana-s.png";
-import sujithaPhoto from "./assets/sujitha-m.png";
 import founderPhoto from "./assets/raghav-s.png";
 import companyLogo from "./assets/company-logo.jpeg";
 import productTricopterPhoto from "./assets/product-tricopter.jpeg";
@@ -58,11 +53,6 @@ const ASSETS = {
   vtol: productVtolPhoto,
   founder: founderPhoto,
   cofounder: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/o9qbfst7_cofoun.jpeg",
-  kishore: kishorePhoto,
-  varsha: varshaPhoto,
-  priyanka: priyankaPhoto,
-  archana: archanaPhoto,
-  sujitha: sujithaPhoto,
   fpv: productFpvPhoto,
   ach3: achievement03Photo,
   ach4: achievement04Photo,
@@ -476,71 +466,6 @@ const TEAM_MEMBERS = [
     phone: "+91 98847 39061",
     phoneHref: "+919884739061",
     phoneTestId: "founder-phone",
-  },
-  {
-    testId: "sujitha-card",
-    photo: ASSETS.sujitha,
-    alt: "Sujitha M",
-    role: "Co-Founder",
-    name: "Sujitha M",
-    bio: "Supports strategic planning, business growth, partnerships, and the successful execution of the company's mission and objectives.",
-    email: "sujithamoni15@gmail.com",
-    emailTestId: "sujitha-email",
-    phone: "+91 95140 52550",
-    phoneHref: "+919514052550",
-    phoneTestId: "sujitha-phone",
-  },
-  {
-    testId: "varsha-card",
-    photo: ASSETS.varsha,
-    alt: "K P Varsha",
-    role: "Secretary",
-    name: "K P Varsha",
-    bio: "Maintains company records, manages communications, schedules meetings, and assists with organizational coordination.",
-    email: "Varshaa.k.pavithran@gmail.com",
-    emailTestId: "varsha-email",
-    phone: "+91 86106 46791",
-    phoneHref: "+918610646791",
-    phoneTestId: "varsha-phone",
-  },
-  {
-    testId: "priyanka-card",
-    photo: ASSETS.priyanka,
-    alt: "Priyanka A",
-    role: "HR",
-    name: "Priyanka A",
-    bio: "Human Resources representative supporting recruitment, talent acquisition, and team coordination while helping build a skilled, collaborative, and innovation-driven aerospace workforce.",
-    email: "priyankaanjan23@gmail.com",
-    emailTestId: "priyanka-email",
-    phone: "+91 76038 07557",
-    phoneHref: "+917603807557",
-    phoneTestId: "priyanka-phone",
-  },
-  {
-    testId: "kishore-card",
-    photo: ASSETS.kishore,
-    alt: "Kishore Karthik R",
-    role: "CAO",
-    name: "Kishore Karthik R",
-    bio: "Coordinates administrative functions, documentation, compliance, and internal operations across the organization.",
-    email: "kishorekarthik432@gmail.com",
-    emailTestId: "kishore-email",
-    phone: "+91 91106 28437",
-    phoneHref: "+919110628437",
-    phoneTestId: "kishore-phone",
-  },
-  {
-    testId: "archana-card",
-    photo: ASSETS.archana,
-    alt: "Archana S",
-    role: "CIO",
-    name: "Archana S",
-    bio: "Leads digital systems, data management, and technology infrastructure supporting drone development and company operations.",
-    email: "archana061106@gmail.com",
-    emailTestId: "archana-email",
-    phone: "+91 80720 87765",
-    phoneHref: "+918072087765",
-    phoneTestId: "archana-phone",
   },
 ];
 
@@ -1370,7 +1295,7 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
         <div className="section-header reveal">
           <div>
             <div className="section-label">Support · Get In Touch</div>
-            <h2 className="section-title">Founders &<br />Contact</h2>
+            <h2 className="section-title">Founder &<br />Contact</h2>
           </div>
           <Socials />
         </div>
@@ -1441,114 +1366,9 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
 
         <div className="founders-grid reveal" data-testid="founders-grid" style={{ marginTop: 56 }}>
           {/* FOUNDER — male */}
-          <div className="founder-card" data-testid="founder-card">
-            <div className="founder-avatar">
-              <img src={ASSETS.founder} alt="Founder" />
-            </div>
-            <div style={{ flex: 1 }}>
-              <div className="founder-role">Founder & CEO</div>
-              <div className="founder-name">Raghav S</div>
-              <p className="founder-bio">
-                Aerospace engineer and defence technologist building autonomous systems
-                that protect lives. Leads platform engineering and product strategy.
-              </p>
-              <div className="founder-links">
-                <a href="mailto:raghav@ragasgroups.com" data-testid="founder-email">raghav@ragasgroups.com</a>
-                <a href="tel:+919884739061" data-testid="founder-phone">+91 98847 39061</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="founder-card" data-testid="kishore-card">
-            <div className="founder-avatar">
-              <img src={ASSETS.kishore} alt="Kishore Karthik R" />
-            </div>
-            <div style={{ flex: 1 }}>
-              <div className="founder-role">CAO</div>
-              <div className="founder-name">Kishore Karthik R</div>
-              <p className="founder-bio">
-                Coordinates administrative functions, documentation, compliance, and
-                internal operations across the organization.
-              </p>
-              <div className="founder-links">
-                <a href="mailto:kishorekarthik432@gmail.com" data-testid="kishore-email">kishorekarthik432@gmail.com</a>
-                <a href="tel:+919110628437" data-testid="kishore-phone">+91 91106 28437</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="founder-card" data-testid="varsha-card">
-            <div className="founder-avatar">
-              <img src={ASSETS.varsha} alt="K P Varsha" />
-            </div>
-            <div style={{ flex: 1 }}>
-              <div className="founder-role">Secretary</div>
-              <div className="founder-name">K P Varsha</div>
-              <p className="founder-bio">
-                Maintains company records, manages communications, schedules meetings,
-                and assists with organizational coordination.
-              </p>
-              <div className="founder-links">
-                <a href="mailto:Varshaa.k.pavithran@gmail.com" data-testid="varsha-email">Varshaa.k.pavithran@gmail.com</a>
-                <a href="tel:+918610646791" data-testid="varsha-phone">+91 86106 46791</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="founder-card" data-testid="priyanka-card">
-            <div className="founder-avatar">
-              <img src={ASSETS.priyanka} alt="Priyanka A" />
-            </div>
-            <div style={{ flex: 1 }}>
-              <div className="founder-role">HR</div>
-              <div className="founder-name">Priyanka A</div>
-              <p className="founder-bio">
-                Human Resources representative supporting recruitment, talent acquisition,
-                and team coordination while helping build a skilled, collaborative, and
-                innovation-driven aerospace workforce.
-              </p>
-              <div className="founder-links">
-                <a href="mailto:priyankaanjan23@gmail.com" data-testid="priyanka-email">priyankaanjan23@gmail.com</a>
-                <a href="tel:+917603807557" data-testid="priyanka-phone">+91 76038 07557</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="founder-card" data-testid="archana-card">
-            <div className="founder-avatar">
-              <img src={ASSETS.archana} alt="Archana S" />
-            </div>
-            <div style={{ flex: 1 }}>
-              <div className="founder-role">CIO</div>
-              <div className="founder-name">Archana S</div>
-              <p className="founder-bio">
-                Leads digital systems, data management, and technology infrastructure
-                supporting drone development and company operations.
-              </p>
-              <div className="founder-links">
-                <a href="mailto:archana061106@gmail.com" data-testid="archana-email">archana061106@gmail.com</a>
-                <a href="tel:+918072087765" data-testid="archana-phone">+91 80720 87765</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="founder-card" data-testid="sujitha-card">
-            <div className="founder-avatar">
-              <img src={ASSETS.sujitha} alt="Sujitha M" />
-            </div>
-            <div style={{ flex: 1 }}>
-              <div className="founder-role">Co-Founder</div>
-              <div className="founder-name">Sujitha M</div>
-              <p className="founder-bio">
-                Supports strategic planning, business growth, partnerships, and the
-                successful execution of the company's mission and objectives.
-              </p>
-              <div className="founder-links">
-                <a href="mailto:sujithamoni15@gmail.com" data-testid="sujitha-email">sujithamoni15@gmail.com</a>
-                <a href="tel:+919514052550" data-testid="sujitha-phone">+91 95140 52550</a>
-              </div>
-            </div>
-          </div>
+          {TEAM_MEMBERS.map((member, index) => (
+            <TeamCard key={member.testId} member={member} index={index} />
+          ))}
         </div>
       </section>
 
