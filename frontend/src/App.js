@@ -463,9 +463,6 @@ const TEAM_MEMBERS = [
     bio: "Aerospace engineer and defence technologist building autonomous systems that protect lives. Leads platform engineering and product strategy.",
     email: "raghav@ragasgroups.com",
     emailTestId: "founder-email",
-    phone: "+91 98847 39061",
-    phoneHref: "+919884739061",
-    phoneTestId: "founder-phone",
   },
 ];
 
@@ -515,9 +512,6 @@ const TeamCard = ({ member, index }) => (
       <div className="founder-links">
         <a href={`mailto:${member.email}`} data-testid={member.emailTestId}>
           <span>{member.email}</span>
-        </a>
-        <a href={`tel:${member.phoneHref}`} data-testid={member.phoneTestId}>
-          <span>{member.phone}</span>
         </a>
       </div>
     </div>
