@@ -2351,7 +2351,7 @@ body::before {
 
 .founders-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: start;
+  align-items: stretch;
 }
 
 .founder-card {
@@ -3795,11 +3795,11 @@ body::before {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-content: center;
-  align-items: start;
+  align-items: stretch;
   gap: 24px;
 }
 
-.founder-card[data-testid="founder-card"] { order: 1; }
+.founder-card[data-testid="founder-card"] { --member-delay: 0; }
 
 .founder-card {
   position: relative;
@@ -4071,7 +4071,7 @@ body::before {
   animation-delay: calc(var(--member-delay, 0) * 90ms);
 }
 
-.founder-card[data-testid="founder-card"] { --member-delay: 0; }
+
 
 @keyframes founder-card-rise {
   from { opacity: 0; translate: 0 24px; scale: 0.985; }
