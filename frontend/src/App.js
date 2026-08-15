@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import axios from "axios";
 import "./App.css";
 import founderPhoto from "./assets/raghav-s.png";
+import dharshiniPhoto from "./assets/dharshini-a.jpeg";
+import anjanaPhoto from "./assets/anjana-narasimhan.jpeg";
+import jayavarshiniPhoto from "./assets/jayavarshini-k.jpeg";
 import companyLogo from "./assets/company-logo.jpeg";
 import productTricopterPhoto from "./assets/product-tricopter.jpeg";
 import productQuadcopterPhoto from "./assets/product-quadcopter.jpeg";
@@ -52,6 +55,9 @@ const ASSETS = {
   octa: productOctocopterPhoto,
   vtol: productVtolPhoto,
   founder: founderPhoto,
+  dharshini: dharshiniPhoto,
+  anjana: anjanaPhoto,
+  jayavarshini: jayavarshiniPhoto,
   cofounder: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/o9qbfst7_cofoun.jpeg",
   fpv: productFpvPhoto,
   ach3: achievement03Photo,
@@ -466,7 +472,7 @@ const TEAM_MEMBERS = [
   },
   {
     testId: "cofounder-card",
-    photo: ASSETS.cofounder,
+    photo: ASSETS.dharshini,
     alt: "Co-Founder",
     role: "Co-Founder",
     name: "Dharshini A",
@@ -476,7 +482,7 @@ const TEAM_MEMBERS = [
   },
   {
     testId: "cao-card",
-    photo: ASSETS.cofounder,
+    photo: ASSETS.anjana,
     alt: "CAO",
     role: "CAO",
     name: "Kodakandla Anjana Narasimhan",
@@ -486,7 +492,7 @@ const TEAM_MEMBERS = [
   },
   {
     testId: "cto-card",
-    photo: ASSETS.cofounder,
+    photo: ASSETS.jayavarshini,
     alt: "CTO",
     role: "CTO",
     name: "Jayavarshini K",
