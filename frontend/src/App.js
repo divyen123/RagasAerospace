@@ -464,6 +464,36 @@ const TEAM_MEMBERS = [
     email: "raghav@ragasgroups.com",
     emailTestId: "founder-email",
   },
+  {
+    testId: "cofounder-card",
+    photo: ASSETS.cofounder,
+    alt: "Co-Founder",
+    role: "Co-Founder",
+    name: "Dharshini A",
+    bio: "CSE professional with strong expertise in AI, software, and emerging technologies. Passionate about building innovative, scalable, technology-driven solutions. Brings sharp problem-solving skills and a strong technical mindset. As Co-Founder, she drives the company's digital and technological growth.",
+    email: "dharshini916.a@gmail.com",
+    emailTestId: "cofounder-email",
+  },
+  {
+    testId: "cao-card",
+    photo: ASSETS.cofounder,
+    alt: "CAO",
+    role: "CAO",
+    name: "Kodakandla Anjana Narasimhan",
+    bio: "Strong in leadership, planning, communication, and decision-making. Manages key processes while supporting business growth and execution. A vital force in building a structured, efficient, and high-performing organization.",
+    email: "anjananarasimhan48@gmail.com",
+    emailTestId: "cao-email",
+  },
+  {
+    testId: "cto-card",
+    photo: ASSETS.cofounder,
+    alt: "CTO",
+    role: "CTO",
+    name: "Jayavarshini K",
+    bio: "Leads the company's technology, innovation, and engineering strategy. Drives AI, automation, and next-generation technology development. Transforms ideas into reliable, scalable, and high-impact solutions. Oversees technical teams, R&D, and product development. A key force behind our technological growth and innovation.",
+    email: "jayavarshinik2109@gmail.com",
+    emailTestId: "cto-email",
+  },
 ];
 
 const Logo = ({ size = 56, withText = true }) => (
