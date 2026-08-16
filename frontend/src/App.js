@@ -476,7 +476,7 @@ const TEAM_MEMBERS = [
     alt: "Co-Founder",
     role: "Co-Founder",
     name: "Dharshini A",
-    bio: "CSE professional with strong expertise in AI, software, and emerging technologies. Passionate about building innovative, scalable, technology-driven solutions. Brings sharp problem-solving skills and a strong technical mindset. As Co-Founder, drives the company's digital and technological growth.",
+    bio: "CSE professional with strong expertise in AI, software, and emerging technologies. Passionate about building innovative, scalable, technology-driven solutions. Brings sharp problem-solving skills and a strong technical mindset, drives the company's digital and technological growth.",
     email: "dharshini916.a@gmail.com",
     emailTestId: "cofounder-email",
   },
