@@ -7,6 +7,8 @@ import founderPhoto from "./assets/raghav-s.png";
 import dharshiniPhoto from "./assets/dharshini-a.jpeg";
 import anjanaPhoto from "./assets/anjana-narasimhan.jpeg";
 import jayavarshiniPhoto from "./assets/jayavarshini-k.jpeg";
+import harinipriyaPhoto from "./assets/harinipriya-m.png";
+import mohamedPhoto from "./assets/mohamed-yusuf-a.png";
 import companyLogo from "./assets/company-logo.jpeg";
 import productTricopterPhoto from "./assets/product-tricopter.jpeg";
 import productQuadcopterPhoto from "./assets/product-quadcopter.jpeg";
@@ -58,6 +60,8 @@ const ASSETS = {
   dharshini: dharshiniPhoto,
   anjana: anjanaPhoto,
   jayavarshini: jayavarshiniPhoto,
+  harinipriya: harinipriyaPhoto,
+  mohamed: mohamedPhoto,
   cofounder: "https://customer-assets.emergentagent.com/job_ragas-team-site/artifacts/o9qbfst7_cofoun.jpeg",
   fpv: productFpvPhoto,
   ach3: achievement03Photo,
@@ -471,6 +475,16 @@ const TEAM_MEMBERS = [
     emailTestId: "founder-email",
   },
   {
+    testId: "coo-card",
+    photo: ASSETS.harinipriya,
+    alt: "COO",
+    role: "COO",
+    name: "Harinipriya M",
+    bio: "As the Chief Operating Officer (COO) of RAGAS Aerospace, she oversees the company’s day-to-day operations and coordinates between the technical, business, and management teams. I’m  responsible for project execution, team coordination, partnerships, resource planning, documentation, and maintaining smooth operational workflows.",
+    email: "harinipriyamahendran@gmail.com",
+    emailTestId: "coo-email",
+  },
+  {
     testId: "cofounder-card",
     photo: ASSETS.dharshini,
     alt: "Co-Founder",
@@ -499,6 +513,16 @@ const TEAM_MEMBERS = [
     bio: "Leads the company's technology, innovation, and engineering strategy. Drives AI, automation, and next-generation technology development. Transforms ideas into reliable, scalable, and high-impact solutions. Oversees technical teams, R&D, and product development. A key force behind our technological growth and innovation.",
     email: "jayavarshinik2109@gmail.com",
     emailTestId: "cto-email",
+  },
+  {
+    testId: "pm-card",
+    photo: ASSETS.mohamed,
+    alt: "Project Manager",
+    role: "Projet manager",
+    name: "Mohamed Yusuf A",
+    bio: "Individuals, organizations, or institutions that provide financial assistance or investment to support the development and successful completion of a project.",
+    email: "my312258@gmail.com",
+    emailTestId: "pm-email",
   },
 ];
 
