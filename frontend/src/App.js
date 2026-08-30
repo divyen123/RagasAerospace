@@ -29,6 +29,11 @@ import achievement10Photo from "./assets/achievement-10.jpeg";
 import achievement11Photo from "./assets/achievement-11.jpeg";
 import achievement12Photo from "./assets/achievement-12.jpeg";
 import achievement13Photo from "./assets/achievement-13.jpeg";
+import gallery01 from "./assets/gallery-01.png";
+import gallery02 from "./assets/gallery-02.jpg";
+import gallery03 from "./assets/gallery-03.jpg";
+import gallery04 from "./assets/gallery-04.jpg";
+import gallery05 from "./assets/gallery-05.png";
 
 // ---------- API ----------
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -77,6 +82,11 @@ const ASSETS = {
   ach1: achievement01Photo,
   ach2: achievement02Photo,
   ach8: achievement08Photo,
+  gal1: gallery01,
+  gal2: gallery02,
+  gal3: gallery03,
+  gal4: gallery04,
+  gal5: gallery05,
 };
 
 // ---------- Achievements ----------
@@ -584,6 +594,7 @@ const NAV_ITEMS = [
   { id: "technology", label: "Technology", testId: "nav-tech" },
   { id: "company", label: "Company", testId: "nav-company" },
   { id: "careers", label: "Careers", testId: "nav-careers" },
+  { id: "gallery", label: "Gallery", testId: "nav-gallery" },
   { id: "support", label: "Support", testId: "nav-support" },
 ];
 
@@ -1043,6 +1054,52 @@ function Achievements({ onOpen }) {
   );
 }
 
+// ---------- Company's Gallery ----------
+const GALLERY_IMAGES = [
+  { id: 1, src: ASSETS.gal1, name: "Gallery 1" },
+  { id: 2, src: ASSETS.gal2, name: "Gallery 2" },
+  { id: 3, src: ASSETS.gal3, name: "Gallery 3" },
+  { id: 4, src: ASSETS.gal4, name: "Gallery 4" },
+  { id: 5, src: ASSETS.gal5, name: "Gallery 5" },
+];
+
+function CompanyGallery() {
+  return (
+    <section className="section" id="gallery" data-testid="gallery-section">
+      <div className="scanner-overlay">
+        <div className="scanner-grid" />
+        <div className="scanner-laser" />
+        <div className="scanner-radar left" />
+        <div className="scanner-corner tl" />
+        <div className="scanner-corner tr" />
+        <div className="scanner-corner bl" />
+        <div className="scanner-corner br" />
+        <div className="scanner-hud-left">SYS_ACTIVE // SCAN_GAL</div>
+        <div className="scanner-hud-right">GALLERY_C2</div>
+      </div>
+      <div className="section-header reveal">
+        <div>
+          <div className="section-label">Moments</div>
+          <h2 className="section-title">Company's<br />Gallery</h2>
+        </div>
+        <p style={{ color: "var(--dim)", maxWidth: 320, fontSize: 13 }}>
+          Glimpses of our company and founder.
+        </p>
+      </div>
+
+      <div className="product-grid reveal" data-testid="gallery-grid">
+        {GALLERY_IMAGES.map((img) => (
+          <div key={img.id} className="product-card thumb-card" style={{ cursor: 'default' }}>
+            <div className="thumb" style={{ height: '300px' }}>
+              <img src={img.src} alt={img.name} loading="lazy" style={{ height: '100%', objectFit: 'cover' }} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 // ---------- Main Page ----------
 function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduct, setActiveProduct }) {
   useReveal();
@@ -1127,6 +1184,9 @@ function HomePage({ openAuth, setOpenAuth, openRoles, setOpenRoles, activeProduc
 
       {/* ACHIEVEMENTS */}
       <Achievements onOpen={setActiveAchievement} />
+
+      {/* GALLERY */}
+      <CompanyGallery />
 
       {/* PRODUCTS */}
       <section className="section" id="products">
