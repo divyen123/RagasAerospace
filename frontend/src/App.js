@@ -34,6 +34,9 @@ import gallery02 from "./assets/gallery-02.jpg";
 import gallery03 from "./assets/gallery-03.jpg";
 import gallery04 from "./assets/gallery-04.jpg";
 import gallery05 from "./assets/gallery-05.png";
+import gallery06 from "./assets/gallery-06.png";
+import gallery07 from "./assets/gallery-07.png";
+import gallery08 from "./assets/gallery-08.jpg";
 
 // ---------- API ----------
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -87,6 +90,9 @@ const ASSETS = {
   gal3: gallery03,
   gal4: gallery04,
   gal5: gallery05,
+  gal6: gallery06,
+  gal7: gallery07,
+  gal8: gallery08,
 };
 
 // ---------- Achievements ----------
@@ -1061,6 +1067,9 @@ const GALLERY_IMAGES = [
   { id: 3, src: ASSETS.gal3, name: "Gallery 3" },
   { id: 4, src: ASSETS.gal4, name: "Gallery 4" },
   { id: 5, src: ASSETS.gal5, name: "Gallery 5" },
+  { id: 6, src: ASSETS.gal6, name: "Gallery 6" },
+  { id: 7, src: ASSETS.gal7, name: "Gallery 7" },
+  { id: 8, src: ASSETS.gal8, name: "Gallery 8" },
 ];
 
 function CompanyGallery() {
