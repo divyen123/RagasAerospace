@@ -1,6 +1,6 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 import "./App.css";
 import founderPhoto from "./assets/raghav-s.png";
@@ -1145,44 +1145,57 @@ function CompanyGallery() {
         ))}
       </div>
 
-      {lightboxIndex !== null && (
-        <div 
-          onClick={closeLightbox}
-          style={{
-            position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
-            backgroundColor: 'rgba(0, 0, 0, 0.9)', zIndex: 9999,
-            display: 'flex', alignItems: 'center', justifyContent: 'center'
-          }}
-        >
-          <button 
-            onClick={prevImage}
-            style={{ position: 'absolute', left: '20px', fontSize: '40px', background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: '20px' }}
-          >
-            &#10094;
-          </button>
-          
-          <img 
-            src={GALLERY_IMAGES[lightboxIndex].src} 
-            alt="Full view" 
-            style={{ maxHeight: '90vh', maxWidth: '90vw', objectFit: 'contain' }} 
-            onClick={(e) => e.stopPropagation()} 
-          />
-
-          <button 
-            onClick={nextImage}
-            style={{ position: 'absolute', right: '20px', fontSize: '40px', background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: '20px' }}
-          >
-            &#10095;
-          </button>
-
-          <button 
+      <AnimatePresence>
+        {lightboxIndex !== null && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
             onClick={closeLightbox}
-            style={{ position: 'absolute', top: '20px', right: '30px', fontSize: '40px', background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: '10px' }}
+            style={{
+              position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
+              backgroundColor: 'rgba(0, 0, 0, 0.9)', zIndex: 9999,
+              display: 'flex', alignItems: 'center', justifyContent: 'center'
+            }}
           >
-            &times;
-          </button>
-        </div>
-      )}
+            <button 
+              onClick={prevImage}
+              style={{ position: 'absolute', left: '20px', fontSize: '40px', background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: '20px', zIndex: 10000 }}
+            >
+              &#10094;
+            </button>
+            
+            <AnimatePresence mode="wait">
+              <motion.img 
+                key={lightboxIndex}
+                src={GALLERY_IMAGES[lightboxIndex].src} 
+                alt="Full view" 
+                initial={{ opacity: 0, x: 50, scale: 0.95 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: -50, scale: 0.95 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                style={{ maxHeight: '90vh', maxWidth: '90vw', objectFit: 'contain' }} 
+                onClick={(e) => e.stopPropagation()} 
+              />
+            </AnimatePresence>
+
+            <button 
+              onClick={nextImage}
+              style={{ position: 'absolute', right: '20px', fontSize: '40px', background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: '20px', zIndex: 10000 }}
+            >
+              &#10095;
+            </button>
+
+            <button 
+              onClick={closeLightbox}
+              style={{ position: 'absolute', top: '20px', right: '30px', fontSize: '40px', background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: '10px', zIndex: 10000 }}
+            >
+              &times;
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
