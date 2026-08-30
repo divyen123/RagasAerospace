@@ -475,16 +475,6 @@ const TEAM_MEMBERS = [
     emailTestId: "founder-email",
   },
   {
-    testId: "coo-card",
-    photo: ASSETS.harinipriya,
-    alt: "COO",
-    role: "COO",
-    name: "Harinipriya M",
-    bio: "As the Chief Operating Officer (COO) of RAGAS Aerospace, she oversees the company’s day-to-day operations and coordinates between the technical, business, and management teams. I’m  responsible for project execution, team coordination, partnerships, resource planning, documentation, and maintaining smooth operational workflows.",
-    email: "harinipriyamahendran@gmail.com",
-    emailTestId: "coo-email",
-  },
-  {
     testId: "cofounder-card",
     photo: ASSETS.dharshini,
     alt: "Co-Founder",
@@ -493,6 +483,16 @@ const TEAM_MEMBERS = [
     bio: "CSE professional with strong expertise in AI, software, and emerging technologies. Passionate about building innovative, scalable, technology-driven solutions. Brings sharp problem-solving skills and a strong technical mindset, drives the company's digital and technological growth.",
     email: "dharshini916.a@gmail.com",
     emailTestId: "cofounder-email",
+  },
+  {
+    testId: "coo-card",
+    photo: ASSETS.harinipriya,
+    alt: "COO",
+    role: "COO",
+    name: "Harinipriya M",
+    bio: "As the Chief Operating Officer (COO) of RAGAS Aerospace, she oversees daily operations, project execution, team coordination, partnerships, and resource planning to ensure smooth and efficient workflows across the organization.",
+    email: "harinipriyamahendran@gmail.com",
+    emailTestId: "coo-email",
   },
   {
     testId: "cao-card",
