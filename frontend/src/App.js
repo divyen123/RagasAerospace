@@ -1073,6 +1073,21 @@ const GALLERY_IMAGES = [
 ];
 
 function CompanyGallery() {
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+
+  const openLightbox = (index) => setLightboxIndex(index);
+  const closeLightbox = () => setLightboxIndex(null);
+  
+  const prevImage = (e) => {
+    e.stopPropagation();
+    setLightboxIndex((prev) => (prev > 0 ? prev - 1 : GALLERY_IMAGES.length - 1));
+  };
+  
+  const nextImage = (e) => {
+    e.stopPropagation();
+    setLightboxIndex((prev) => (prev < GALLERY_IMAGES.length - 1 ? prev + 1 : 0));
+  };
+
   return (
     <section className="section" id="gallery" data-testid="gallery-section">
       <div className="scanner-overlay">
@@ -1096,15 +1111,78 @@ function CompanyGallery() {
         </p>
       </div>
 
-      <div className="product-grid reveal" data-testid="gallery-grid">
-        {GALLERY_IMAGES.map((img) => (
-          <div key={img.id} className="product-card thumb-card" style={{ cursor: 'default' }}>
-            <div className="thumb" style={{ height: '300px' }}>
-              <img src={img.src} alt={img.name} loading="lazy" style={{ height: '100%', objectFit: 'cover' }} />
-            </div>
+      <div 
+        className="reveal" 
+        data-testid="gallery-grid"
+        style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(4, 1fr)', 
+          gap: '16px', 
+          padding: '0 20px',
+          marginTop: '30px',
+          maxWidth: '1200px',
+          margin: '30px auto'
+        }}
+      >
+        {GALLERY_IMAGES.map((img, idx) => (
+          <div 
+            key={img.id} 
+            onClick={() => openLightbox(idx)}
+            style={{ 
+              aspectRatio: '1', 
+              overflow: 'hidden', 
+              borderRadius: '8px', 
+              cursor: 'pointer', 
+              border: '1px solid rgba(255,255,255,0.1)',
+              background: '#0a0a0a',
+              transition: 'transform 0.2s ease-in-out'
+            }}
+            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            <img src={img.src} alt={img.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
         ))}
       </div>
+
+      {lightboxIndex !== null && (
+        <div 
+          onClick={closeLightbox}
+          style={{
+            position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
+            backgroundColor: 'rgba(0, 0, 0, 0.9)', zIndex: 9999,
+            display: 'flex', alignItems: 'center', justifyContent: 'center'
+          }}
+        >
+          <button 
+            onClick={prevImage}
+            style={{ position: 'absolute', left: '20px', fontSize: '40px', background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: '20px' }}
+          >
+            &#10094;
+          </button>
+          
+          <img 
+            src={GALLERY_IMAGES[lightboxIndex].src} 
+            alt="Full view" 
+            style={{ maxHeight: '90vh', maxWidth: '90vw', objectFit: 'contain' }} 
+            onClick={(e) => e.stopPropagation()} 
+          />
+
+          <button 
+            onClick={nextImage}
+            style={{ position: 'absolute', right: '20px', fontSize: '40px', background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: '20px' }}
+          >
+            &#10095;
+          </button>
+
+          <button 
+            onClick={closeLightbox}
+            style={{ position: 'absolute', top: '20px', right: '30px', fontSize: '40px', background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: '10px' }}
+          >
+            &times;
+          </button>
+        </div>
+      )}
     </section>
   );
 }
