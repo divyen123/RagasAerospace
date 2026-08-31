@@ -37,6 +37,16 @@ import gallery05 from "./assets/gallery-05.png";
 import gallery06 from "./assets/gallery-06.png";
 import gallery07 from "./assets/gallery-07.png";
 import gallery08 from "./assets/gallery-08.jpg";
+import gallery09 from "./assets/gallery-09.jpeg";
+import gallery10 from "./assets/gallery-10.jpeg";
+import gallery11 from "./assets/gallery-11.jpeg";
+import gallery12 from "./assets/gallery-12.jpeg";
+import gallery13 from "./assets/gallery-13.jpeg";
+import gallery14 from "./assets/gallery-14.jpeg";
+import gallery15 from "./assets/gallery-15.jpeg";
+import gallery16 from "./assets/gallery-16.jpeg";
+import gallery17 from "./assets/gallery-17.jpeg";
+import gallery18 from "./assets/gallery-18.jpeg";
 
 // ---------- API ----------
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -93,6 +103,16 @@ const ASSETS = {
   gal6: gallery06,
   gal7: gallery07,
   gal8: gallery08,
+  gal9: gallery09,
+  gal10: gallery10,
+  gal11: gallery11,
+  gal12: gallery12,
+  gal13: gallery13,
+  gal14: gallery14,
+  gal15: gallery15,
+  gal16: gallery16,
+  gal17: gallery17,
+  gal18: gallery18,
 };
 
 // ---------- Achievements ----------
@@ -1070,6 +1090,16 @@ const GALLERY_IMAGES = [
   { id: 6, src: ASSETS.gal6, name: "Gallery 6" },
   { id: 7, src: ASSETS.gal7, name: "Gallery 7" },
   { id: 8, src: ASSETS.gal8, name: "Gallery 8" },
+  { id: 9, src: ASSETS.gal9, name: "Gallery 9" },
+  { id: 10, src: ASSETS.gal10, name: "Gallery 10" },
+  { id: 11, src: ASSETS.gal11, name: "Gallery 11" },
+  { id: 12, src: ASSETS.gal12, name: "Gallery 12" },
+  { id: 13, src: ASSETS.gal13, name: "Gallery 13" },
+  { id: 14, src: ASSETS.gal14, name: "Gallery 14" },
+  { id: 15, src: ASSETS.gal15, name: "Gallery 15" },
+  { id: 16, src: ASSETS.gal16, name: "Gallery 16" },
+  { id: 17, src: ASSETS.gal17, name: "Gallery 17" },
+  { id: 18, src: ASSETS.gal18, name: "Gallery 18" },
 ];
 
 function CompanyGallery() {
@@ -1106,9 +1136,6 @@ function CompanyGallery() {
           <div className="section-label">Moments</div>
           <h2 className="section-title">Company's<br />Gallery</h2>
         </div>
-        <p style={{ color: "var(--dim)", maxWidth: 320, fontSize: 13 }}>
-          Glimpses of our company and founder.
-        </p>
       </div>
 
       <div 
@@ -1116,7 +1143,7 @@ function CompanyGallery() {
         data-testid="gallery-grid"
         style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(4, 1fr)', 
+          gridTemplateColumns: 'repeat(6, 1fr)', 
           gap: '16px', 
           padding: '0 20px',
           marginTop: '30px',
