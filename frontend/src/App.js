@@ -47,6 +47,11 @@ import gallery15 from "./assets/gallery-15.jpeg";
 import gallery16 from "./assets/gallery-16.jpeg";
 import gallery17 from "./assets/gallery-17.jpeg";
 import gallery18 from "./assets/gallery-18.jpeg";
+import gallery19 from "./assets/gallery-19.png";
+import gallery20 from "./assets/gallery-20.png";
+import gallery21 from "./assets/gallery-21.png";
+import gallery22 from "./assets/gallery-22.png";
+import gallery23 from "./assets/gallery-23.png";
 
 // ---------- API ----------
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -113,6 +118,11 @@ const ASSETS = {
   gal16: gallery16,
   gal17: gallery17,
   gal18: gallery18,
+  gal19: gallery19,
+  gal20: gallery20,
+  gal21: gallery21,
+  gal22: gallery22,
+  gal23: gallery23,
 };
 
 // ---------- Achievements ----------
@@ -1100,6 +1110,11 @@ const GALLERY_IMAGES = [
   { id: 16, src: ASSETS.gal16, name: "Gallery 16" },
   { id: 17, src: ASSETS.gal17, name: "Gallery 17" },
   { id: 18, src: ASSETS.gal18, name: "Gallery 18" },
+  { id: 19, src: ASSETS.gal19, name: "Gallery 19" },
+  { id: 20, src: ASSETS.gal20, name: "Gallery 20" },
+  { id: 21, src: ASSETS.gal21, name: "Gallery 21" },
+  { id: 22, src: ASSETS.gal22, name: "Gallery 22" },
+  { id: 23, src: ASSETS.gal23, name: "Gallery 23" },
 ];
 
 function CompanyGallery() {
