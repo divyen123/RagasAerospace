@@ -52,6 +52,7 @@ import gallery20 from "./assets/gallery-20.png";
 import gallery21 from "./assets/gallery-21.png";
 import gallery22 from "./assets/gallery-22.png";
 import gallery23 from "./assets/gallery-23.png";
+import gallery24 from "./assets/gallery-24.png";
 
 // ---------- API ----------
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -123,6 +124,7 @@ const ASSETS = {
   gal21: gallery21,
   gal22: gallery22,
   gal23: gallery23,
+  gal24: gallery24,
 };
 
 // ---------- Achievements ----------
@@ -1115,6 +1117,7 @@ const GALLERY_IMAGES = [
   { id: 21, src: ASSETS.gal21, name: "Gallery 21" },
   { id: 22, src: ASSETS.gal22, name: "Gallery 22" },
   { id: 23, src: ASSETS.gal23, name: "Gallery 23" },
+  { id: 24, src: ASSETS.gal24, name: "Gallery 24" },
 ];
 
 function CompanyGallery() {
