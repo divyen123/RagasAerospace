@@ -1990,7 +1990,7 @@ button { font-family: inherit; cursor: pointer; }
   max-height: 320px;
   overflow-y: auto;
 }
-.ach-desc-text p { color: var(--text); font-size: 14px; line-height: 1.7; margin: 0; }
+.ach-desc-text p { color: var(--text); font-size: 14px; line-height: 1.7; margin: 0; white-space: pre-line; }
 .ach-desc .ach-desc-label { margin-bottom: 10px; }
 
 /* Re-anchor popup positions for the new wider popup */

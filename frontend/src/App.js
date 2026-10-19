@@ -29,6 +29,8 @@ import achievement10Photo from "./assets/achievement-10.jpeg";
 import achievement11Photo from "./assets/achievement-11.jpeg";
 import achievement12Photo from "./assets/achievement-12.jpeg";
 import achievement13Photo from "./assets/achievement-13.jpeg";
+import achievement14Photo from "./assets/achievement-14.jpeg";
+import achievement15Photo from "./assets/achievement-15.jpeg";
 import gallery01 from "./assets/gallery-01.png";
 import gallery02 from "./assets/gallery-02.jpg";
 import gallery03 from "./assets/gallery-03.jpg";
@@ -98,6 +100,8 @@ const ASSETS = {
   ach11: achievement11Photo,
   ach12: achievement12Photo,
   ach13: achievement13Photo,
+  ach14: achievement14Photo,
+  ach15: achievement15Photo,
   ach1: achievement01Photo,
   ach2: achievement02Photo,
   ach8: achievement08Photo,
@@ -206,6 +210,18 @@ const ACHIEVEMENTS = [
     location: "SRM University, Chennai", year: "2026",
     img: ASSETS.ach13,
     body: "Ragas Aerospace participated in Project Expo 2026 at SRM University, presenting an advanced All-Terrain Disaster Management Drone developed for emergency response applications. The project highlighted our ongoing efforts in autonomous systems, aerospace engineering and mission-focused drone technologies aimed at solving real-world challenges through practical innovation.",
+  },
+  {
+    id: 14, title: "StartupTN × IAAA Aerospace & Defence Startup Pitch Fest",
+    location: "StartupTN × IAAA, Chennai", year: "2026",
+    img: ASSETS.ach14,
+    body: `Pitching at the StartupTN × IAAA Aerospace & Defence Startup Pitch Fest was a big step for Ragas Aerospace. 🚀\n\nWe took RAIC, an AI upgrade pod for drones, and TARA, a voice assistant that turns spoken missions in English, Hindi and Tamil into flight plans, in front of the panel.\n\nWhere we stand, honestly:\n✅ A working 3D mission simulator for patrol, search and rescue, tower inspection and delivery\n✅ A Safety Guard that is separate from the AI: the AI proposes and fixed code decides. It passes 91/91 tests, with 2,000 random flight plans and 5,000 corrupted inputs, 0 errors\n✅ A pod design for a ready-made X500 v2 frame, about ₹1.4 lakh to build\n\nNext: hardware bring-up from November, then supervised flights in permitted airspace. Nothing has flown yet, and we’ll prove it step by step.\n\nThank you to StartupTN, IAAA, our mentors and my team for getting us here. We’re looking for pilot users in agriculture, security and defence, and for mentors who have done this before.`,
+  },
+  {
+    id: 15, title: "Startup Spotlight 1 – Innovate X Aerospace & Defence",
+    location: "IIT Madras Research Park, Chennai", year: "2026",
+    img: ASSETS.ach15,
+    body: `A proud milestone for Ragas Aerospace. 🚀\n\nHonoured to have Ragas Aerospace selected for Startup Spotlight 1 at IIT Madras Research Park, as part of Innovate X – Engineering the Future of Aerospace & Defence Innovation. It was a great opportunity to showcase our vision in UAVs, autonomous aerial systems, and aerospace & defence technology alongside innovators and startups working to shape the future of the industry.\n\nThe event also opened meaningful conversations with investors, industry leaders, technology partners, and fellow founders interested in exploring potential collaborations with Ragas Aerospace.\n\nFor us, this is more than a stage appearance — it is another step toward building mission-driven aerospace technology from India for real-world applications.\n\nGrateful to MathWorks, StartupTN, and IIT Madras Research Park for creating this platform and bringing together the aerospace and defence innovation ecosystem.\n\nRagas Aerospace — Engineering the Future of Autonomous Flight. 🚀`,
   },
 ];
 
@@ -887,7 +903,7 @@ function AchievementModal({ achievement, onClose }) {
         <div className="product-modal-body">
           <div className="section-label">{achievement.location} • {achievement.year}</div>
           <h2>{achievement.title}</h2>
-          <p style={{ marginTop: 16, lineHeight: 1.7, fontSize: 14, color: "var(--text)" }}>{achievement.body}</p>
+          <p style={{ marginTop: 16, lineHeight: 1.7, fontSize: 14, color: "var(--text)", whiteSpace: "pre-line" }}>{achievement.body}</p>
         </div>
       </div>
     </div>
