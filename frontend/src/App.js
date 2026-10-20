@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
@@ -855,12 +855,20 @@ function AuthModal({ open, onClose, defaultMode = "login" }) {
 
 // ---------- Product detail modal ----------
 function ProductModal({ product, onClose }) {
+  const bodyRef = useRef(null);
   if (!product) return null;
   return (
     <div className="roles-overlay" data-testid="product-modal" onClick={(e) => e.target.classList.contains("roles-overlay") && onClose()}>
       <div className="product-modal">
         <button className="modal-close" onClick={onClose} data-testid="product-close">✕</button>
-        <div className="product-modal-img">
+        <div 
+          className="product-modal-img"
+          onWheel={(e) => {
+            if (bodyRef.current) {
+              bodyRef.current.scrollTop += e.deltaY;
+            }
+          }}
+        >
           {product.img ? (
             <img src={product.img} alt={product.name} data-testid={`pm-img-${product.id}`} />
           ) : (
@@ -870,7 +878,7 @@ function ProductModal({ product, onClose }) {
             </div>
           )}
         </div>
-        <div className="product-modal-body">
+        <div className="product-modal-body" ref={bodyRef}>
           <div className="section-label">{product.num}</div>
           <h2>{product.name}</h2>
           <p>{product.long}</p>
@@ -885,12 +893,20 @@ function ProductModal({ product, onClose }) {
 }
 
 function AchievementModal({ achievement, onClose }) {
+  const bodyRef = useRef(null);
   if (!achievement) return null;
   return (
     <div className="roles-overlay" data-testid="achievement-modal" onClick={(e) => e.target.classList.contains("roles-overlay") && onClose()}>
       <div className="product-modal">
         <button className="modal-close" onClick={onClose} data-testid="achievement-close">✕</button>
-        <div className="product-modal-img">
+        <div 
+          className="product-modal-img"
+          onWheel={(e) => {
+            if (bodyRef.current) {
+              bodyRef.current.scrollTop += e.deltaY;
+            }
+          }}
+        >
           {achievement.img ? (
             <img src={achievement.img} alt={achievement.title} data-testid={`am-img-${achievement.id}`} />
           ) : (
@@ -900,7 +916,7 @@ function AchievementModal({ achievement, onClose }) {
             </div>
           )}
         </div>
-        <div className="product-modal-body">
+        <div className="product-modal-body" ref={bodyRef}>
           <div className="section-label">{achievement.location} • {achievement.year}</div>
           <h2>{achievement.title}</h2>
           <p style={{ marginTop: 16, lineHeight: 1.7, fontSize: 14, color: "var(--text)", whiteSpace: "pre-line" }}>{achievement.body}</p>
